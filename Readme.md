@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [David Dsgnr](https://up.htmlacademy.ru/adaptive/15/user/451023).
-* Наставник: `Неизвестно`.
+* Наставник: [Евгений Сергеев](https://htmlacademy.ru/profile/siebensieben).
 
 ---
 
