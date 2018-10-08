@@ -1,0 +1,39 @@
+.present {
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 289px;
+}
+
+.present__icon {
+  width: 56px;
+}
+
+.goods-add__list {
+  @include list-reset;
+}
+
+.goods-add__item {
+  width: 100%;
+}
+@media (min-width: $tablet-width) {
+  .present {
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    height: 200px;
+  }
+
+  .goods-add__item {
+    display: flex;
+  }
+}
+@media (min-width: $desktop-width) {
+  .present {
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    width: 245px;
+    height: 289px;
+  }
+
+  .goods-add__list {
+    width: 895px;
+  }
+}

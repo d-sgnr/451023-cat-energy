@@ -1,0 +1,13 @@
+.site-list {
+  @include list-reset;
+}
+
+.site-list a {
+  @include a-reset;
+}
+
+@media (min-width: $tablet-width) {
+  .site-list {
+    display: flex;
+  }
+}

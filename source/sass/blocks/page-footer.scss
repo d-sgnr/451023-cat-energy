@@ -1,0 +1,34 @@
+.page-footer {
+  background-color: $bg-grey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 236px;
+  padding: 39px 20px 22px;
+  box-sizing: border-box;
+}
+
+.page-footer__logo {
+  width: 64px;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.page-footer__agency-img {
+  width: 27px;
+  height: 34px;
+}
+@media (min-width: $tablet-width) {
+  .page-footer {
+    height: 150px;
+    padding: 30px 58px;
+  }
+}
+@media (min-width: $desktop-width) {
+  .page-footer {
+    padding: 64px 110px 56px;
+  }
+}

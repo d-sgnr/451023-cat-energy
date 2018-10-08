@@ -1,0 +1,10 @@
+.example {
+  background-color: $bg-grey;
+  padding: 33px 20px 38px;
+}
+
+@media (min-width: $desktop-width) {
+  .example__wrapper {
+    display: flex;
+  }
+}

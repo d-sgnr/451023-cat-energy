@@ -1,0 +1,8 @@
+.facts {
+  @include list-reset;
+  display: flex;
+}
+
+.facts__value {
+  border: 1px solid $dark-grey;
+}
