@@ -1,0 +1,32 @@
+.goods {
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+}
+
+.goods__item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (min-width: $tablet-width) {
+  .goods {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .goods__item {
+    flex-direction: column;
+    width: 324px
+  }
+  .catalog {
+    display: flex;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .goods__item {
+    flex-direction: column;
+    width: 245px
+  }
+}

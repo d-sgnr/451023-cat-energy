@@ -1,0 +1,19 @@
+.button {
+  background-color: $green;
+  height: 40px;
+  text-decoration: none;
+  width: 190px;
+  height: 20px;
+  mix-blend-mode: undefined;
+  font-family: $regular;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  color: #ffffff;
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    font-size: 20px;
+  }
+}

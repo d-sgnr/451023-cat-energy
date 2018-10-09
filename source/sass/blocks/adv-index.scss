@@ -1,0 +1,70 @@
+.adv-index {
+  background-image: url(../img/index-background-mobile@1x.jpg);
+  background-repeat: no-repeat;
+}
+
+.adv-index__h1 {
+  width: 245px;
+  font-weight: normal;
+  font-style: normal;
+  font-family: $regular;
+  font-size: 36px;
+  line-height: 1;
+  text-align: center;
+  color: #ffffff;
+      margin: auto;
+}
+
+.adv-index__call {
+  width: 198px;
+  height: 16px;
+  font-family: $regular;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: auto;
+}
+
+@media (min-width: $tablet-width) {
+  .adv-index {
+    background-image: none;
+    height: 950px;
+  }
+  .adv-index__image {
+    position: absolute;
+    height: 609px;
+  }
+  .adv-index__h1 {
+    color: $black;
+    font-size: 60px;
+    width: 410px;
+    text-align: left;
+        margin: 0;
+  }
+
+  .adv-index__call {
+    width: auto;
+    font-size: 20px;
+    line-height: 1;
+    text-align: left;
+    color: $black;
+    margin: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .adv-index {
+    background-image: url(../img/index-background-desktop@1x.jpg);
+    background-position: right;
+    height: 696px;
+  }
+  .adv-index__image {
+    position: absolute;
+    height: 499px;
+  }
+}

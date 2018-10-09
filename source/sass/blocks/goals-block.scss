@@ -1,0 +1,10 @@
+.goals-block {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: $desktop-width) {
+  .goals-block {
+    flex-direction: row;
+  }
+}
