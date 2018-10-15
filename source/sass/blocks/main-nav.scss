@@ -1,0 +1,45 @@
+.main-nav__toggle {
+  width: 25px;
+  height: 19px;
+  background-color: inherit;
+  border: none;
+  position: absolute;
+  right: 23px;
+  top: 23px;
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  justify-content: space-between;
+
+    &:before {
+      content: "";
+      background-color: $black;
+      height: 2px;
+      display: block;
+      width: 25px;
+    }
+
+    &:after {
+      content: "";
+      background-color: $black;
+      height: 2px;
+      display: block;
+      width: 25px;
+    }
+}
+
+.main-nav__toggle span {
+  background-color: $black;
+  height: 2px;
+  display: block;
+  width: 25px;
+
+}
+
+@media (min-width: $tablet-width) {
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+}

@@ -1,5 +1,50 @@
+.more {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.more__title {
+  @include o-regular;
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  margin-bottom: 11px;
+}
+
+.more__text {
+  font-size: 12px;
+  color: $black;
+  line-height: 1.33;
+  margin-bottom: 22px;
+}
+
+.more__button {
+  background-color: $bg-grey;
+  color: $black;
+}
+
+.more br {
+  display: none;
+}
 @media (min-width: $tablet-width) {
   .more {
     width: 324px;
+  }
+
+  .more br {
+    display: block;
+  }
+
+  .more__button {
+    width: 100%;
+  }
+
+  .more__title {
+    text-align: center;
+  }
+
+  .more__text {
+    text-align: center;
   }
 }

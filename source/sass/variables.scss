@@ -3,17 +3,14 @@
 $green: #68b738;
 $greyish-brown: #444444;
 $black: #111111;
+$light-black: #222222;
 $bg-grey: #f2f2f2;
 $dark-grey: #cdcdcd;
+$light-grey: #e6e6e6;
 
 //Cat-Energy — Colors
 
 $tablet-width: 768px;
 $desktop-width: 1200px;
 
-//Cat-Energy — Fonts
-
-$regular: "Oswald-Regular";
-$medium: "Oswald-Medium";
-
-//Cat-Energy — Fonts
+$tablet-only: '(min-width: 768px) and (max-width: 1199px)';

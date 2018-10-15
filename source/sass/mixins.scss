@@ -8,3 +8,13 @@
   text-decoration: none;
   color: inherit;
 }
+
+@mixin o-regular {
+  font-family: "Oswald";
+  font-weight: 400;
+}
+
+@mixin o-medium {
+  font-family: "Oswald";
+  font-weight: 500;
+}

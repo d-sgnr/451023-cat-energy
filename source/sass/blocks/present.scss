@@ -3,37 +3,45 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 289px;
+  margin: 0 -20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 65px 60px 43px;
+  box-sizing: border-box;
 }
 
 .present__icon {
   width: 56px;
 }
 
-.goods-add__list {
-  @include list-reset;
-}
-
-.goods-add__item {
-  width: 100%;
+.present__text {
+  color: white;
+  font-size: 16px;
+  line-height: 1.25;
+  max-width: 159px;
+  text-align: center;
 }
 @media (min-width: $tablet-width) {
   .present {
     background-image: url("../img/gift-photo-tablet@1x.jpg");
     height: 200px;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .present {
+    flex-direction: row;
   }
 
-  .goods-add__item {
-    display: flex;
+  .present__text {
+    text-align: left;
   }
 }
 @media (min-width: $desktop-width) {
   .present {
-    background-image: url("../img/gift-photo-desktop@1x.jpg");
     width: 245px;
     height: 289px;
-  }
-
-  .goods-add__list {
-    width: 895px;
   }
 }

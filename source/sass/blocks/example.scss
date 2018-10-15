@@ -1,10 +1,42 @@
-.example {
-  background-color: $bg-grey;
-  padding: 33px 20px 38px;
+.example__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
+.example {
+  background-color: $bg-grey;
+  padding: 33px 20px;
+}
+
+.example__overall {
+  @include o-regular;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-top: 25px;
+  text-align: center;
+}
+@media (min-width: $tablet-width) {
+  .example {
+    background: linear-gradient(to bottom, white, 40%, white, 40%, #f2f2f2);
+  }
+}
 @media (min-width: $desktop-width) {
+  .example {
+    background: linear-gradient(to bottom, white, 10%, white, 10%, #f2f2f2);
+    margin: 0 -110px;
+  }
+
   .example__wrapper {
     display: flex;
+    flex-direction: row;
+  }
+
+  .example__wrapper--low {
+    flex-direction: column;
+  }
+
+  .example__text {
+    max-width: 430px;
   }
 }

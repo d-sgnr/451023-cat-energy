@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: column;
   height: 236px;
   padding: 39px 20px 22px;
   box-sizing: border-box;
@@ -15,6 +16,8 @@
 .page-footer__wrapper {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .page-footer__agency-img {
@@ -25,6 +28,10 @@
   .page-footer {
     height: 150px;
     padding: 30px 58px;
+    flex-direction: row;
+  }
+  .page-footer__wrapper {
+    justify-content: flex-end;
   }
 }
 @media (min-width: $desktop-width) {

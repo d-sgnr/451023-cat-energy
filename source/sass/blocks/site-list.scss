@@ -4,10 +4,49 @@
 
 .site-list a {
   @include a-reset;
+  @include o-medium;
+  font-size: 20px;
+  color: $black;
+  text-transform: uppercase;
+  border-bottom: 1px solid $light-grey;
+  display: block;
+  padding: 24px;
+  text-align: center;
+  line-height: 1;
 }
-
 @media (min-width: $tablet-width) {
   .site-list {
     display: flex;
+  }
+
+  .site-list a {
+    @include o-regular;
+    font-size: 18px;
+    border: none;
+  }
+}
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .site-list a {
+    padding: 18px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+@media (min-width: $desktop-width) {
+  .site-list {
+    display: flex;
+  }
+
+  .page-header--index .site-list a {
+    @include o-regular;
+    font-size: 20px;
+    color: white;
+  }
+
+  .site-list a {
+    @include o-regular;
+    font-size: 20px;
   }
 }
