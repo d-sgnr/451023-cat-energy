@@ -2,18 +2,33 @@
   background-color: $green;
   height: 40px;
   text-decoration: none;
-  width: 190px;
-  height: 20px;
-  mix-blend-mode: undefined;
-  font-family: $regular;
-  font-size: 14px;
+  width: 280px;
+  padding: 13px 0 12px;
+  @include o-regular;
+  font-size: 16px;
+  line-height: 1.25;
+  align-items: center;
   font-weight: normal;
   font-style: normal;
   color: #ffffff;
+  margin: auto;
+  box-sizing: border-box;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 @media (min-width: $tablet-width) {
   .button {
+    height: auto;
     font-size: 20px;
+  }
+}
+@media (min-width: $tablet-width) {
+  .button {
+    padding: 17px 28px 15px;
+    box-sizing: border-box;
+    margin: 0;
   }
 }

@@ -7,26 +7,81 @@
 .goods__item {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 24px;
 }
 
+.goods__title {
+  font-size: 16px;
+  @include o-regular;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.goods__text {
+  font-size: 12px;
+  color: $black;
+  line-height: 1.33;
+}
+
+.goods__info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.goods__wrapper {
+  flex-grow: 1;
+  margin: auto 0;
+}
 @media (min-width: $tablet-width) {
   .goods {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-end;
   }
+
+  .goods__img {
+    height: 208px;
+    margin-bottom: 39px;
+  }
+
   .goods__item {
     flex-direction: column;
-    width: 324px
+    width: 324px;
+    background: linear-gradient(to bottom, white, 124px, white, 124px, #f2f2f2);
+    align-items: center;
+    padding: 40px 38px;
+    box-sizing: border-box;
   }
-  .catalog {
-    display: flex;
+
+  .goods__wrapper {
+    width: 100%;
+    text-align: center;
+  }
+
+  .goods__info {
+    padding: 6px 0;
+    border-bottom: 1px solid $dark-grey;
+  }
+
+  .goods__text {
+    font-size: 16px;
+  }
+
+  .goods__button {
+    margin-top: 33px;
+    width: 100%;
+  }
+
+  .goods__item--more {
+    border: 1px solid $dark-grey;
+    background: white;
+    height: 431px;
   }
 }
-
-@media (min-width: $tablet-width) {
+@media (min-width: $desktop-width) {
   .goods__item {
     flex-direction: column;
-    width: 245px
+    width: 245px;
   }
 }

@@ -3,12 +3,14 @@
   width: 320px;
 }
 
+.page-main__heading--form {
+  margin: 30px 0 35px 20px;
+}
 @media (min-width: $tablet-width) {
   .page-main {
     width: 768px;
   }
 }
-
 @media (min-width: $desktop-width) {
   .page-main {
     width: 1200px;

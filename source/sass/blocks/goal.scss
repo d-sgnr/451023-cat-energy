@@ -1,15 +1,25 @@
 .goal {
   background-color: $bg-grey;
   padding: 22px;
+  z-index: 50;
+  box-sizing: border-box;
 }
 
 .goal__img {
+  background-repeat: no-repeat;
   background-size: 50px 50px;
-  background-color: $green;
   width: 50px;
   height: 50px;
-  border-radius: 50%;
-  background-repeat: no-repeat;
+
+  &:before {
+    content: "";
+    position: absolute;
+    background-color: #68b738;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    z-index: -1;
+  }
 }
 
 .goal__img--lose {
@@ -21,7 +31,7 @@
 }
 
 .goal__title {
-  font-family: $regular;
+  @include o-regular;
   text-transform: uppercase;
   font-size: 24px;
 }
@@ -31,8 +41,88 @@
   align-items: center;
 }
 
-@media (min-width: $desktop-width) {
+.goal__show {
+  @include o-regular;
+  text-transform: uppercase;
+  font-size: 16px;
+  text-decoration: none;
+  color: $black;
+  display: flex;
+  align-items: center;
+
+  &:after {
+    content: "";
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 12px;
+    width: 25px;
+    margin-left: 12px;
+  }
+}
+
+.goal__text {
+  border-bottom: 1px solid $light-grey;
+  padding-bottom: 24px;
+}
+@media (min-width: $tablet-width) {
   .goal {
-    width: 570px;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 81px 62px 62px 53px;
+  }
+
+  .goal__title {
+    font-size: 36px;
+  }
+
+  .goal__show {
+    font-size: 20px;
+
+    &:after {
+      margin-left: 25px;
+    }
+  }
+
+  .goal__img {
+    height: 200px;
+    width: 200px;
+    background-position: center;
+
+    &:before {
+      height: 200px;
+      width: 200px;
+    }
+  }
+}
+@media (min-width: $desktop-width) {
+  .goals-block {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .goal {
+    width: 47.5%;
+    flex-direction: column;
+  }
+
+  .goal__img {
+    height: 100px;
+    width: 100px;
+    background-position: center;
+
+    &:before {
+      height: 100px;
+      width: 100px;
+    }
+  }
+
+  .goal__img--lose {
+    background-size: 71px 97px;
+  }
+
+  .goal__img--gain {
+    background-size: 134px;
   }
 }
