@@ -4,6 +4,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-size: 320px 305px;
+  margin: auto;
+  width: 320px;
+  position: relative;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+    }
 }
 
 .adv-index__h1 {
@@ -34,6 +42,8 @@
   font-size: 14px;
   padding: 11px 0;
   line-height: 1.29;
+  margin-bottom: 22px;
+  width: 280px;
 }
 
 .adv-index__heading {
@@ -46,6 +56,8 @@
     background-image: none;
     height: 950px;
     align-items: flex-start;
+    width: auto;
+    padding-left: 120px;
   }
 
   .adv-index__image {
@@ -53,7 +65,10 @@
     height: auto;
     top: 341px;
     margin: auto;
-    width: 768px;
+    width: 709px;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 
   .adv-index__h1 {
@@ -70,29 +85,24 @@
     line-height: 1;
     text-align: left;
     color: $black;
-    margin: 0;
+    margin-bottom: 48px;
   }
 
   .adv-index__heading {
     color: $black;
     font-size: 60px;
     text-align: left;
-    padding: 29px 0 19px;
-  }
-
-  .adv-index__call {
-    height: 20px;
-    @include o-regular;
-    font-size: 14px;
-    font-weight: normal;
-    text-align: left;
-    color: $black;
-    margin-bottom: 29px;
+    margin: 39px 0 37px;
+    padding: 0;
+    line-height: 1;
   }
 
   .adv-index__button {
     position: relative;
     z-index: 50;
+    font-size: 20px;
+    padding: 17px 28px 15px 27px;
+    width: auto;
   }
 }
 @media (min-width: $desktop-width) {
@@ -102,13 +112,22 @@
     background-size: 720px 696px;
     height: 696px;
     padding-left: 193px;
-    margin: 0 -110px;
+    margin-bottom: 80px;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+      }
+
+  }
+
+  .adv-index__call {
+    margin-bottom: 53px;
   }
 
   .adv-index__image {
     position: absolute;
     height: 499px;
-    left: 585px;
+    left: 591px;
     top: 142px;
     margin: 0;
     width: auto;

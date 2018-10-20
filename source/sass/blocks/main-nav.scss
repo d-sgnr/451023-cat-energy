@@ -11,21 +11,21 @@
   flex-direction: column;
   justify-content: space-between;
 
-    &:before {
-      content: "";
-      background-color: $black;
-      height: 2px;
-      display: block;
-      width: 25px;
-    }
+  &:before {
+    content: "";
+    background-color: $black;
+    height: 2px;
+    display: block;
+    width: 25px;
+  }
 
-    &:after {
-      content: "";
-      background-color: $black;
-      height: 2px;
-      display: block;
-      width: 25px;
-    }
+  &:after {
+    content: "";
+    background-color: $black;
+    height: 2px;
+    display: block;
+    width: 25px;
+  }
 }
 
 .main-nav__toggle span {
@@ -33,13 +33,18 @@
   height: 2px;
   display: block;
   width: 25px;
-
 }
-
+@media (max-width: 767px) {
+  .main-nav {
+        width: 100%;
+  }
+}
 @media (min-width: $tablet-width) {
+  .main-nav {
+    z-index: 50;
+  }
 
   .main-nav__toggle {
     display: none;
   }
-
 }

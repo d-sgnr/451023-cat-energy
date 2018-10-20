@@ -4,6 +4,10 @@
   flex-wrap: wrap;
 }
 
+.benefits-list__text {
+  margin: 0;
+}
+
 .benefits-list__number {
   display: none;
 }
@@ -12,37 +16,62 @@
   display: flex;
   align-items: center;
   position: relative;
+  margin-bottom: 20px;
 
   &:before {
     display: none;
   }
 }
 
-.benefits-list__img {
-  background-color: $green;
-  width: 60px;
-  height: 60px;
-  background-position: center;
-  background-size: 50px;
-  background-repeat: no-repeat;
-  flex-shrink: 0;
-  margin-right: 20px;
+.benefits-list__item {
+  &:before {
+    content: "";
+    display: block;
+    background-color: $green;
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-size: 50px;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
 }
 
-.benefits-list__img--leaf {
-  background-image: url("../img/advantage-leaf@1x.png");
+.benefits-list__item--leaf {
+  &:before {
+    background-image: url("../img/advantage-leaf@1x.png");
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/advantage-leaf@2x.png");
+      }
+  }
 }
 
-.benefits-list__img--eat {
-  background-image: url("../img/advantage-dining@1x.png");
+.benefits-list__item--eat {
+  &:before {
+    background-image: url("../img/advantage-dining@1x.png");
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/advantage-dining@2x.png");
+    }
+  }
 }
 
-.benefits-list__img--water {
-  background-image: url("../img/advantage-powder@1x.png");
+.benefits-list__item--water {
+  &:before {
+    background-image: url("../img/advantage-powder@1x.png");
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/advantage-powder@2x.png");
+    }
+  }
 }
 
-.benefits-list__img--clock {
-  background-image: url("../img/advantage-clock@1x.png");
+.benefits-list__item--clock {
+  &:before {
+    background-image: url("../img/advantage-clock@1x.png");
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/advantage-clock@2x.png");
+    }
+  }
 }
 @media (min-width: $tablet-width) {
   .benefits-list {
@@ -53,8 +82,11 @@
     display: flex;
     align-items: center;
     position: relative;
-
     &:before {
+      width: 80px;
+      height: 80px;
+    }
+    &:after {
       counter-increment: myCounter;
       content: counter(myCounter);
       @include o-regular;
@@ -62,8 +94,8 @@
       position: absolute;
       font-size: 281px;
       color: $bg-grey;
-      top: 0;
-      right: 0;
+      top: -40px;
+      left: 126px;
       line-height: 1;
       z-index: -1;
       display: block;
@@ -74,6 +106,14 @@
     flex-direction: column;
     width: 50%;
     align-items: flex-start;
+    margin-bottom: 97px;
+    &:before {
+      margin-bottom: 37px;
+    }
+  }
+
+  .benefits-list__text {
+    width: 245px;
   }
 
   .benefits-list__img {
@@ -83,7 +123,10 @@
 }
 @media (min-width: $desktop-width) {
   .benefits-list__item {
-    &:before {}
+    &:after {
+      left: auto;
+      right: 0;
+    }
   }
 
   .benefits-list {

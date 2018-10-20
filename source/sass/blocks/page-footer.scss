@@ -9,8 +9,13 @@
   box-sizing: border-box;
 }
 
+.page-footer__agency {
+  margin-right: 23px;
+}
+
 .page-footer__logo {
-  width: 64px;
+  width: 128px;
+  height: 24px;
 }
 
 .page-footer__wrapper {
@@ -20,9 +25,48 @@
   width: 100%;
 }
 
-.page-footer__agency-img {
+.page-footer__social {
+  display: flex;
+  align-items: center;
+}
+
+.page-footer__logo-agency {
   width: 27px;
   height: 34px;
+  fill: $icon-grey;
+}
+
+.page-footer__social-icon svg {
+  fill: $icon-grey;
+}
+
+.page-footer__social {
+  display: flex;
+  align-items: center;
+}
+
+.page-footer__social-icon {
+  margin: 0 18px;
+}
+.page-footer__social-icon--vk svg {
+  width: 22px;
+  height: 12px;
+}
+
+.page-footer__social-icon--inst svg {
+  width: 17px;
+  height: 17px;
+}
+
+.page-footer__social-icon--fb svg {
+  width: 10px;
+  height: 19px;
+}
+
+@media (min-width: $tablet-width) and (max-width: 1199px) {
+  .before-after__img img {
+    margin-top: -197px;
+  }
 }
 @media (min-width: $tablet-width) {
   .page-footer {
@@ -30,9 +74,31 @@
     padding: 30px 58px;
     flex-direction: row;
   }
+
   .page-footer__wrapper {
     justify-content: flex-end;
+    width: auto;
   }
+
+  .page-footer__social-icon {
+    margin: 0 14px;
+  }
+
+  .page-footer__social-icon--vk svg {
+    width: 30px;
+    height: 16px;
+  }
+
+  .page-footer__social-icon--inst svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .page-footer__social-icon--fb svg {
+    width: 14px;
+    height: 28px;
+  }
+
 }
 @media (min-width: $desktop-width) {
   .page-footer {

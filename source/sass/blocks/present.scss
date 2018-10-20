@@ -3,17 +3,22 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 289px;
-  margin: 0 -20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
   padding: 65px 60px 43px;
   box-sizing: border-box;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/gift-photo-mobile@2x.jpg");
+    }
 }
 
 .present__icon {
   width: 56px;
+  height: 61px;
+  fill: white;
 }
 
 .present__text {
@@ -29,6 +34,10 @@
     height: 200px;
     width: 100%;
   }
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+    }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
   .present {
@@ -41,7 +50,12 @@
 }
 @media (min-width: $desktop-width) {
   .present {
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
     width: 245px;
     height: 289px;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/gift-photo-tablet@2x.jpg");
+      }
   }
 }

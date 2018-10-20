@@ -1,35 +1,172 @@
-.before-after {
-  position: relative;
-}
-
-.before-after__img {
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .before-after__img--before {
-  background-image: url("../img/before-mobile@1x.png");
   width: 100%;
   height: 232px;
 }
 
 .before-after__img--after {
-  background-image: url("../img/after-mobile@1x.png");
   position: absolute;
   top: 0;
   visibility: hidden;
   height: 242px;
 }
 
-@media (min-width: $tablet-width) {
-  .before-after__img--before {
-    width: 730px;
-    height: 499px;
+.before-after__slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:after {
+    content: "Стало";
+    @include o-regular;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  &:before {
+    content: "Было";
+    @include o-regular;
+    font-size: 20px;
+    text-transform: uppercase;
   }
 }
 
-@media (min-width: $desktop-width) {
-  .before-after__img--before {
-
+@media (max-width: 767px) {
+  .before-after {
+    width: 280px;
+    margin: auto;
   }
+}
+@media (min-width: $tablet-width) and (max-width: 1199px) {
+  .before-after {
+    position: relative;
+  }
+  .before-after__img--after {
+    position: absolute;
+  }
+}
+@media (min-width: $tablet-width) {
+
+  .before-after__slider-nav {
+    height: 41px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 428px;
+    background: none;
+    position: relative;
+    margin: 0 24px;
+  }
+
+  .before-after__slider-nav:focus {
+    outline: none;
+  }
+
+  .before-after__slider-nav::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0 0 0 #000000;
+    background: #EAEAEA;
+    border-radius: 5px;
+    border: 0 solid #000000;
+  }
+
+  .before-after__slider-nav::-webkit-slider-thumb {
+    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.15);
+    border: 0 solid #000000;
+    height: 34px;
+    width: 34px;
+    border-radius: 34px;
+    background: radial-gradient(4px, $green 100%, white);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -12px;
+    position: relative;
+  }
+
+  .before-after__slider-nav:focus::-webkit-slider-runnable-track {
+    background: #EAEAEA;
+  }
+
+  .before-after__slider-nav::-moz-range-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0 0 0 #000000;
+    background: #EAEAEA;
+    border-radius: 5px;
+    border: 0 solid #000000;
+  }
+
+  .before-after__slider-nav::-moz-range-thumb {
+    box-shadow: 1px 1px 0 #CDCDCD;
+    border: 0 solid #000000;
+    height: 34px;
+    width: 34px;
+    border-radius: 34px;
+    background: #FFFFFF;
+    cursor: pointer;
+  }
+
+  .before-after__slider-nav::-ms-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+
+  .before-after__slider-nav::-ms-fill-lower {
+    background: #EAEAEA;
+    border: 0 solid #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 0 #000000;
+  }
+
+  .before-after__slider-nav::-ms-fill-upper {
+    background: #EAEAEA;
+    border: 0 solid #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 0 #000000;
+  }
+
+  .before-after__slider-nav::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 1px 1px 0 #CDCDCD;
+    border: 0 solid #000000;
+    height: 34px;
+    width: 34px;
+    border-radius: 34px;
+    background: #FFFFFF;
+    cursor: pointer;
+  }
+
+  .before-after__slider-nav:focus::-ms-fill-lower {
+    background: #EAEAEA;
+  }
+
+  .before-after__slider-nav:focus::-ms-fill-upper {
+    background: #EAEAEA;
+  }
+
+  .before-after__img {
+    margin: auto;
+  }
+
+  .before-after__img--after {
+    visibility: visible;
+  }
+
+  .before-after__img--before {
+    width: 730px;
+    height: auto;
+    margin-bottom: 36px;
+  }
+}
+@media (min-width: $desktop-width) {
+  .before-after__img--before {}
 }

@@ -2,6 +2,8 @@
   display: flex;
   justify-content: space-between;
   padding: 31px 20px 26px;
+  max-width: 320px;
+  margin: auto;
 }
 
 .contacts__call {
@@ -19,22 +21,34 @@
 .contacts--bg {
   background-color: $bg-grey;
 }
-
-.contacts__wrapper br {
-  display: none;
-}
 @media (min-width: $tablet-width) {
-  .contacts {
-    background-color: $bg-grey;
-  }
+  .contacts {}
+
   .contacts__wrapper {
     padding: 71px 69px 72px 62px;
+    max-width: 708px;
+  }
+
+  .contacts__wrapper span {
+    margin-top: 14px;
+    display: block;
+  }
+
+  .contacts__call {
+    font-size: 20px;
+    line-height: 1.25;
+  }
+
+  .contacts__address {
+    text-align: right;
   }
 }
 @media (min-width: $desktop-width) {
+  .contacts--bg {
+    background-color: none;
+  }
+
   .contacts {
-    background-color: $bg-grey;
-    margin: 0 -110px;
     position: relative;
   }
 
@@ -48,17 +62,12 @@
     box-sizing: border-box;
   }
 
-  .contacts__wrapper br {
-    display: block;
-    padding-top: 16px;
-  }
-
   .contacts__call {
     max-width: 154px;
   }
 
   .contacts__address {
     max-width: 155px;
+    text-align: left;
   }
-
 }

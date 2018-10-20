@@ -1,18 +1,45 @@
 .page-main {
   margin: auto;
-  width: 320px;
+  min-width: 320px;
+  max-width: 1440px;
+  margin: auto;
 }
 
-.page-main__heading--form {
-  margin: 30px 0 35px 20px;
+.page-main__heading {
+  margin-bottom: 35px;
+}
+
+.page-main__wrap {
+  width: 280px;
+  margin: auto;
+}
+
+.page-main__heading {
+  margin-top: 31px;
 }
 @media (min-width: $tablet-width) {
   .page-main {
-    width: 768px;
+    min-width: 768px;
+  }
+
+  .page-main__wrap {
+    width: 708px;
+    margin: auto;
+  }
+  .page-main__heading {
+    margin-top: 63px;
   }
 }
 @media (min-width: $desktop-width) {
   .page-main {
+    min-width: 1200px;
+  }
+
+  .page-main__wrap {
     width: 1200px;
+    margin: auto;
+  }
+  .page-main__heading {
+    margin-top: 83px;
   }
 }
