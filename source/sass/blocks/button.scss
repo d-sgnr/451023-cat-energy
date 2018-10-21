@@ -2,8 +2,6 @@
   background-color: $green;
   height: 40px;
   text-decoration: none;
-  width: 280px;
-  padding: 13px 0 12px;
   @include o-regular;
   font-size: 16px;
   line-height: 1.25;
@@ -21,14 +19,9 @@
 }
 @media (min-width: $tablet-width) {
   .button {
-    height: auto;
+    height: 52px;
     font-size: 20px;
-  }
-}
-@media (min-width: $tablet-width) {
-  .button {
-    padding: 17px 28px 15px;
-    box-sizing: border-box;
+    line-height: 1;
     margin: 0;
   }
 }

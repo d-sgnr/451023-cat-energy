@@ -1,9 +1,24 @@
 .catalog {
-  padding: 0 20px;
+  margin-bottom: 31px;
 }
+
+@media (max-width: 767px) {
+  .catalog {
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: #e6e6e6;
+      left: 0;
+    }
+  }
+}
+
 @media (min-width: $tablet-width) {
   .catalog {
     display: flex;
-    padding: 0 30px;
+    margin-bottom: 55px;
   }
 }

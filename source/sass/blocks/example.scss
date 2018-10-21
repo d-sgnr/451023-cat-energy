@@ -1,12 +1,11 @@
 .example__wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  width: 280px;
+  margin: auto;
 }
 
-.example {
-  background-color: $bg-grey;
-  padding: 33px 20px;
+.example__text {
+  margin-top: 0;
+  margin-bottom: 27px;
 }
 
 .example__overall {
@@ -16,27 +15,114 @@
   margin-top: 25px;
   text-align: center;
 }
-@media (min-width: $tablet-width) {
+
+.example__header {
+  margin-bottom: 33px;
+}
+@media (max-width: 767px) {
   .example {
-    background: linear-gradient(to bottom, white, 40%, white, 40%, #f2f2f2);
+    background-color: $bg-grey;
+    padding: 33px 0 38px;
+  }
+
+  .example__facts-block {
+    text-align: center;
+    margin-bottom: 44px;
   }
 }
-@media (min-width: $desktop-width) {
-  .example {
-    background: linear-gradient(to bottom, white, 10%, white, 10%, #f2f2f2);
-    margin: 0 -110px;
+@media (min-width: $tablet-width) {
+  .example__header {
+    margin: 50px 0 60px;
   }
 
   .example__wrapper {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .example__wrapper--low {
-    flex-direction: column;
+    width: 708px;
+    margin: auto;
+    box-sizing: border-box;
+    position: relative;
   }
 
   .example__text {
-    max-width: 430px;
+    width: 100%;
+    margin-bottom: 56px;
+  }
+
+  .example__facts-block {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .example__overall {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 20px;
+    line-height: 1;
+    margin-top: 16px;
+  }
+
+  .example__overall span {
+    margin-top: 11px;
+  }
+
+  .example__wrapper--top {
+    padding: 0;
+  }
+
+  .example__bg {
+    position: relative;
+  }
+}
+@media (min-width: $tablet-width) and (max-width: 1199px) {
+  .example__before-after {
+    background: linear-gradient(to right, $bg-grey 50%, $bg-darker-grey 50%);
+    height: 462px;
+    margin-top: 197px;
+  }
+}
+@media (min-width: $desktop-width) {
+  .example__header {
+    margin: 65px 0;
+  }
+
+  .example__bg {
+    background-color: $bg-grey;
+    min-height: 462px;
+  }
+
+  .example__wrapper {
+    width: 1200px;
+    margin: auto;
+    padding: 75px 0 67px;
+    box-sizing: border-box;
+  }
+
+  .example__facts-block {
+    display: inline-block;
+  }
+
+  .example__text {
+    max-width: 439px;
+    margin-bottom: 71px;
+    margin-top: 0;
+  }
+
+  .example__before-after {
+    position: absolute;
+    top: -191px;
+    right: 16px;
+  }
+
+  .example__overall {
+    display: inline;
+  }
+
+  .example__overall span {
+    display: inline;
+    margin-left: 64px;
+  }
+
+  .example__wrapper--top {
+    padding: 0;
   }
 }

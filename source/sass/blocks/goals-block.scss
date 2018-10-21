@@ -2,9 +2,14 @@
   display: flex;
   flex-direction: column;
 }
-
+@media (min-width: $tablet-width) {
+  .goals-block {
+    margin-bottom: 21px;
+  }
+}
 @media (min-width: $desktop-width) {
   .goals-block {
     flex-direction: row;
+    margin-bottom: 49px;
   }
 }
