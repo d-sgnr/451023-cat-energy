@@ -8,10 +8,11 @@
   margin: auto;
   width: 320px;
   position: relative;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/index-background-mobile@2x.jpg");
-    }
+  padding-top: 27px;
+  line-height: 1;
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
 }
 
 .adv-index__h1 {
@@ -49,21 +50,21 @@
 .adv-index__heading {
   color: white;
   text-align: center;
-  padding: 29px 0 19px;
+  margin-bottom: 24px;
 }
 @media (min-width: $tablet-width) {
   .adv-index {
     background-image: none;
-    height: 950px;
+    min-height: 810px;
     align-items: flex-start;
     width: auto;
-    padding-left: 120px;
+    padding: 32px 0 0 118px;
   }
 
   .adv-index__image {
     position: absolute;
     height: auto;
-    top: 341px;
+    top: 232px;
     margin: auto;
     width: 709px;
     bottom: 0;
@@ -85,16 +86,17 @@
     line-height: 1;
     text-align: left;
     color: $black;
-    margin-bottom: 48px;
+    margin-bottom: 52px;
   }
 
   .adv-index__heading {
     color: $black;
     font-size: 60px;
     text-align: left;
-    margin: 39px 0 37px;
+    margin-bottom: 42px;
     padding: 0;
     line-height: 1;
+        max-width: 414px;
   }
 
   .adv-index__button {
@@ -108,20 +110,21 @@
 @media (min-width: $desktop-width) {
   .adv-index {
     background-image: url("../img/index-background-desktop@1x.jpg");
-    background-position: right;
-    background-size: 720px 696px;
+    background-position-x: right;
+    background-position-y: top;
+    background-size: 50%;
     height: 696px;
-    padding-left: 193px;
     margin-bottom: 80px;
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/index-background-desktop@2x.jpg");
-      }
-
+    padding-top: 226px;
+    min-height: auto;
+    box-sizing: border-box;
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+    }
   }
 
   .adv-index__call {
-    margin-bottom: 53px;
+    margin-bottom: 61px;
   }
 
   .adv-index__image {
@@ -134,7 +137,7 @@
   }
 
   .adv-index__heading {
-    margin: 226px 0 33px;
+    margin-bottom: 33px;
     padding: 0;
     line-height: 1;
   }

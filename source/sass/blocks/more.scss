@@ -17,7 +17,7 @@
   font-size: 12px;
   color: $black;
   line-height: 1.33;
-  margin-bottom: 22px;
+  margin-bottom: 16px;
 }
 
 .more__button {
@@ -33,8 +33,11 @@
 .more__icon {
   width: 31px;
   height: 31px;
-  margin-bottom: 25px;
-  margin-top: 27px;
+  margin: 27px 0 23px;
+}
+
+.more__icon {
+  opacity: 0.2;
 }
 @media (min-width: $tablet-width) {
   .more {

@@ -7,7 +7,7 @@
 .goods__item {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
 }
 
 .goods__title {
@@ -15,6 +15,9 @@
   @include o-regular;
   text-transform: uppercase;
   margin-bottom: 18px;
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .goods__text {
@@ -36,7 +39,12 @@
 .goods__button {
   width: 100%;
 }
-@media (max-width: 767px) {
+
+.goods__item--more {
+  justify-content: center;
+}
+
+@media (max-width: $mobile-width-only) {
   .goods__item {
     &:before {
       content: "";
@@ -81,7 +89,7 @@
     align-items: center;
     padding: 0 38px 38px;
     box-sizing: border-box;
-    margin-top: 125px;
+    margin: 122px 0 18px;
     min-height: 431px;
   }
 
@@ -102,6 +110,14 @@
   .goods__title {
     font-size: 20px;
     line-height: 1;
+  }
+
+  .goods__title span {
+    display: block;
+  }
+
+  .goods__title br {
+    display: none;
   }
 
   .goods__button {

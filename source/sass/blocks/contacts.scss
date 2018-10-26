@@ -1,9 +1,12 @@
 .contacts__wrapper {
+  max-width: 320px;
+  margin: auto;
+}
+
+.contacts__card {
   display: flex;
   justify-content: space-between;
   padding: 31px 20px 26px;
-  max-width: 320px;
-  margin: auto;
 }
 
 .contacts__call {
@@ -12,6 +15,15 @@
   color: $black;
   @include o-regular;
   line-height: 1.25;
+      max-width: 155px;
+}
+
+.contacts__address {
+width: 157px;
+}
+
+.contacts__card span {
+  display: block;
 }
 
 .contacts__address.simple-text {
@@ -22,16 +34,16 @@
   background-color: $bg-grey;
 }
 @media (min-width: $tablet-width) {
-  .contacts {}
-
   .contacts__wrapper {
-    padding: 71px 69px 72px 62px;
     max-width: 708px;
   }
 
-  .contacts__wrapper span {
+  .contacts__card {
+    padding: 65px 41px 57px;;
+  }
+
+  .contacts__card span {
     margin-top: 14px;
-    display: block;
   }
 
   .contacts__call {
@@ -53,11 +65,16 @@
   }
 
   .contacts__wrapper {
-    background: white;
+    width: 1220px;
     position: absolute;
-    width: 570px;
+    z-index: 100;
     left: 110px;
     top: 95px;
+  }
+
+  .contacts__card {
+    background: white;
+    width: 570px;
     padding: 66px 90px 59px 76px;
     box-sizing: border-box;
   }

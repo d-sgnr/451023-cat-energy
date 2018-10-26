@@ -1,9 +1,8 @@
 .goal {
   background-color: $bg-grey;
-  padding: 39px 21px;
+  padding: 36px 21px 22px;
   z-index: 50;
   box-sizing: border-box;
-  margin-bottom: 20px;
   position: relative;
 
   &:before {
@@ -25,6 +24,10 @@
     display: block;
     position: absolute;
   }
+}
+
+.goal:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .goal--gain {
@@ -51,7 +54,7 @@
   @include o-regular;
   text-transform: uppercase;
   font-size: 24px;
-  margin: 0 0 36px 71px;
+  margin: 0 0 33px 71px;
 }
 
 .goal__header {
@@ -82,13 +85,12 @@
 .goal__text {
   border-bottom: 1px solid $light-grey;
   margin-top: 0;
-  margin-bottom: 24px;
+  padding-bottom: 24px;
 }
 @media (min-width: $tablet-width) {
   .goal {
     width: 100%;
-    padding: 81px 62px 62px 53px;
-    margin-bottom: 30px;
+    padding: 75px 62px 62px 53px;
 
     &:before {
       width: 200px;
@@ -109,6 +111,10 @@
     }
   }
 
+  .goal:not(:last-child) {
+    margin-bottom: 27px;
+  }
+
   .goal--loose {
     &:after {
       width: 141px;
@@ -121,11 +127,12 @@
 
   .goal__title {
     font-size: 36px;
-    margin: 0 0 26px;
+    margin: 0 0 23px;
   }
 
   .goal__text {
-    max-width: 371px;
+    max-width: 344px;
+    margin-bottom: 29px;
   }
 
   .goal__show {
@@ -133,18 +140,23 @@
 
     &:after {
       margin-left: 25px;
+      background-image: url("../img/icon-right-arrow-verylong.svg");
+      width: 34px;
+      background-position-x: -10px;
+      transition: 0.3s;
+    }
+
+    &:hover:after {
+      background-position-x: 0;
+      transition: 0.3s;
     }
   }
 }
 @media (min-width: $desktop-width) {
-  .goals-block {
-    display: flex;
-    justify-content: space-between;
-  }
-
   .goal {
     width: 570px;
-    padding: 81px 62px 62px 53px;
+    padding: 75px 62px 62px 53px;
+    margin-bottom: 27px;
 
     &:before {
       width: 100px;
@@ -174,10 +186,12 @@
 
   .goal__text {
     max-width: 100%;
+    border-bottom: none;
+    padding-bottom: 0;
   }
 
   .goal__title {
     font-size: 36px;
-    margin: 0 0 76px 164px;
+    margin: 0 0 72px 161px;
   }
 }
