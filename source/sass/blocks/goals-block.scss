@@ -3,11 +3,13 @@
   flex-direction: column;
   margin-bottom: 20px;
 }
+
 @media (min-width: $tablet-width) {
   .goals-block {
     margin-bottom: 26px;
   }
 }
+
 @media (min-width: $desktop-width) {
   .goals-block {
     display: flex;

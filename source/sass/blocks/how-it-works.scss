@@ -1,12 +1,11 @@
-.how-it-works {}
-
 .how-it-works_heading {
   margin-bottom: 31px;
   line-height: 1.57;
 }
+
 @media (min-width: $tablet-width) {
   .how-it-works {
-    &:after {
+    &::after {
       content: "";
       display: block;
       position: absolute;
@@ -22,9 +21,10 @@
     margin-bottom: 57px;
   }
 }
+
 @media (min-width: $desktop-width) {
   .how-it-works {
-    &:after {
+    &::after {
       display: none;
     }
   }

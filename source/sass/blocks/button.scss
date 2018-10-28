@@ -2,10 +2,10 @@
   background-color: $green;
   height: 40px;
   text-decoration: none;
+
   @include o-regular;
   font-size: 16px;
   line-height: 1.25;
-  align-items: center;
   font-weight: normal;
   font-style: normal;
   color: #ffffff;
@@ -42,7 +42,6 @@
   }
 
   &:active {
-    color: rgba(255, 255, 255, 0.3);
     transition: 0.3s;
     color: rgba(68, 68, 68, 0.3);
   }

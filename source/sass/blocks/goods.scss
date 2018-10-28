@@ -12,6 +12,7 @@
 
 .goods__title {
   font-size: 16px;
+
   @include o-regular;
   text-transform: uppercase;
   margin-bottom: 18px;
@@ -46,7 +47,7 @@
 
 @media (max-width: $mobile-width-only) {
   .goods__item {
-    &:before {
+    &::before {
       content: "";
       display: block;
       position: absolute;
@@ -57,6 +58,7 @@
     }
   }
 }
+
 @media (min-width: $tablet-width) {
   .goods__img-wrapper {
     margin: 0 -40px;
@@ -67,10 +69,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-end;
-  }
-
-  .goods__title br {
-    display: block;
   }
 
   .goods__img {
@@ -134,6 +132,7 @@
     justify-content: flex-end;
   }
 }
+
 @media (min-width: $desktop-width) {
   .goods__item {
     flex-direction: column;

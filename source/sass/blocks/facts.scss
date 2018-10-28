@@ -12,9 +12,9 @@
 .facts__value {
   border: 1px solid $dark-grey;
   font-size: 24px;
+
   @include o-regular;
   min-width: 124px;
-  display: block;
   text-align: center;
   line-height: 1;
   padding: 14px 21px;
@@ -38,6 +38,7 @@
   padding-bottom: 0;
   max-width: 57px;
 }
+
 @media (min-width: $tablet-width) {
   .facts {
     justify-content: flex-start;
@@ -64,6 +65,7 @@
     margin: 0 42px 42px 0;
   }
 }
+
 @media (min-width: $desktop-width) {
   .facts__title {
     background-color: $bg-grey;

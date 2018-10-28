@@ -1,7 +1,7 @@
 @mixin list-reset {
   list-style: none;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 @mixin a-reset {
@@ -10,11 +10,11 @@
 }
 
 @mixin o-regular {
-  font-family: "Oswald";
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
 }
 
 @mixin o-medium {
-  font-family: "Oswald";
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 500;
 }

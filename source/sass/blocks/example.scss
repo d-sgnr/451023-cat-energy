@@ -20,6 +20,7 @@
 .example__header {
   margin-bottom: 33px;
 }
+
 @media (max-width: $mobile-width-only) {
   .example {
     background-color: $bg-grey;
@@ -31,10 +32,12 @@
     margin-bottom: 37px;
   }
 }
+
 @media (min-width: $tablet-width) {
   .example {
     padding-top: 12px;
   }
+
   .example__header {
     margin-bottom: 60px;
   }
@@ -77,6 +80,7 @@
     position: relative;
   }
 }
+
 @media (min-width: $tablet-width) and (max-width: 1199px) {
   .example__before-after {
     background: linear-gradient(to right, $bg-grey 50%, $bg-darker-grey 50%);
@@ -84,17 +88,19 @@
     margin-top: 192px;
   }
 }
+
 @media (min-width: $desktop-width) {
   .example {
     padding: 0;
   }
+
   .example__header {
     margin-bottom: 65px;
     line-height: 1;
   }
 
   .example__bg {
-        background: linear-gradient(to right, #f2f2f2 1034px, #eaeaea 1034px);
+    background: $bg-grey;
     min-height: 462px;
   }
 
@@ -117,8 +123,9 @@
 
   .example__before-after {
     position: absolute;
-    top: -180px;
-    right: 3%;
+    top: -174px;
+    left: 50%;
+    margin-left: -37px;
   }
 
   .example__overall {

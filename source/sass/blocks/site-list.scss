@@ -28,6 +28,7 @@
     opacity: 0.6;
   }
 }
+
 @media (min-width: $tablet-width) {
   .site-list {
     display: flex;
@@ -51,12 +52,13 @@
     }
   }
 }
+
 @media (min-width: $desktop-width) {
   .site-list {
     display: flex;
   }
 
-  .site-list__item--active-index a {
+  .site-list__item--active--index a {
     border-bottom: 2px solid white;
   }
 

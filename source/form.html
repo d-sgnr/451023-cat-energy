@@ -6,9 +6,15 @@
   <title>HTML Academy: Кэт энерджи — Форма</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <link rel="stylesheet" type="text/css" href="css/style.min.css">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.min.css">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <script src="js/picturefill.min.js"></script>
 
 </head>
 
@@ -42,8 +48,8 @@
 
     </nav>
   </header>
-
-  <main class="page-main">
+<div class="main-stable">
+  <main class="main-stable__main page-main">
     <div class="page-main__wrap">
       <h1 class="page-main__heading page-main__heading--form heading">Подбор программы</h1>
       <section class="form">
@@ -93,7 +99,7 @@
           <div class="form__contacts">
             <h2 class="form__heading heading heading--line heading--line--big">Контактные данные <span>(владельца кота)</span></h2>
             <div class="form__wrapper">
-              <div class="form__item-wrapper form__item-icon form__item-margin--right form__item-long">
+              <div class="form__item-wrapper form__item-icon form__item-margin form__item-margin--right form__item-long">
                 <label class="form__label" for="mail">E-mail:*</label><input id="mail" class="form__input form__input--with-icon" name="mail" placeholder="kuklachev@gmail.com" required="">
                 <svg class="form__input-icon form__input-icon--mail" width="18" height="14">
                   <use xlink:href="#icon-mail"></use>
@@ -168,10 +174,12 @@
         </div>
 
       </div>
-      <section id="map" class="contacts__map map">
+      <section class="contacts__map-wrapper">
+        <div id="map" class="contacts__map"></div>
       </section>
     </section>
   </main>
+</div>
 
   <footer class="page-footer">
     <div class="page-footer__wrapper">

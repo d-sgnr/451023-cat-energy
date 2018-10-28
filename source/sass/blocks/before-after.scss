@@ -24,8 +24,9 @@
   border: 1px solid $dark-grey;
   box-sizing: border-box;
 
-  &:after {
+  &::after {
     content: "Стало";
+
     @include o-regular;
     font-size: 16px;
     text-transform: uppercase;
@@ -34,8 +35,9 @@
     margin-left: 18px;
   }
 
-  &:before {
+  &::before {
     content: "Было";
+
     @include o-regular;
     font-size: 16px;
     text-transform: uppercase;
@@ -53,11 +55,13 @@
   position: absolute;
   left: 6px;
 }
+
 @media (max-width: $mobile-width-only) {
   .before-after {
     margin: auto;
   }
 }
+
 @media (min-width: $tablet-width) and (max-width: 1199px) {
   .before-after {
     position: relative;
@@ -76,8 +80,10 @@
     position: relative;
     top: -160px;
     left: 1px;
+    min-height: 380px;
   }
 }
+
 @media (min-width: $tablet-width) {
   .before-after__slider {
     width: 428px;
@@ -85,11 +91,11 @@
     border-radius: 2.5px;
     background-color: #dcdcdc;
 
-    &:after {
+    &::after {
       font-size: 20px;
     }
 
-    &:before {
+    &::before {
       font-size: 20px;
     }
   }
@@ -99,7 +105,7 @@
     height: 34px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
     border: solid 1px #cdcdcd;
-    background: radial-gradient(4px, $green 100%, white);
+    background: radial-gradient($green 4px, 4px, white);
     border-radius: 50%;
     left: auto;
     transition: 0.3s;
@@ -118,10 +124,6 @@
     }
   }
 
-  .before-after__img--after {
-    visibility: visible;
-  }
-
   .before-after__img--before {
     width: 338px;
     height: 499px;
@@ -131,6 +133,7 @@
   }
 
   .before-after__img--after {
+    visibility: visible;
     width: 339px;
     height: 517px;
     margin-bottom: 48px;
@@ -161,13 +164,30 @@
     display: flex;
   }
 }
+
 @media (min-width: $desktop-width) {
+  .before-after__wrapper {
+    &::after {
+      position: absolute;
+      content: "";
+      background: $bg-darker-grey;
+      height: 100%;
+      width: 397px;
+      top: 174px;
+      margin: 0;
+      z-index: 0;
+      left: 360px;
+    }
+  }
+
   .before-after__img--before {
     width: 360px;
+    margin-bottom: 35px;
   }
 
   .before-after__img--after {
     width: 365px;
-
+    z-index: 50;
+    margin-bottom: 35px;
   }
 }

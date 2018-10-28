@@ -5,7 +5,7 @@
   box-sizing: border-box;
   position: relative;
 
-  &:before {
+  &::before {
     content: "";
     background-color: #68b738;
     border-radius: 50%;
@@ -17,7 +17,7 @@
     left: 21px;
   }
 
-  &:after {
+  &::after {
     content: "";
     background-repeat: no-repeat;
     background-position: center;
@@ -31,7 +31,7 @@
 }
 
 .goal--gain {
-  &:after {
+  &::after {
     background-image: url("../img/icon-cat-pro.svg");
     width: 67px;
     height: 28px;
@@ -41,7 +41,7 @@
 }
 
 .goal--loose {
-  &:after {
+  &::after {
     background-image: url("../img/icon-cat-slim.svg");
     width: 35px;
     height: 49px;
@@ -70,8 +70,9 @@
   color: $black;
   display: flex;
   align-items: center;
+  transition: 0.3s;
 
-  &:after {
+  &::after {
     content: "";
     background-image: url("../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
@@ -80,6 +81,11 @@
     width: 25px;
     margin-left: 12px;
   }
+
+  &:active {
+    opacity: 0.3;
+    transition: 0.3s;
+  }
 }
 
 .goal__text {
@@ -87,12 +93,13 @@
   margin-top: 0;
   padding-bottom: 24px;
 }
+
 @media (min-width: $tablet-width) {
   .goal {
     width: 100%;
     padding: 75px 62px 62px 53px;
 
-    &:before {
+    &::before {
       width: 200px;
       height: 200px;
       top: 92px;
@@ -102,7 +109,7 @@
   }
 
   .goal--gain {
-    &:after {
+    &::after {
       width: 268px;
       height: 113px;
       right: 28px;
@@ -116,7 +123,7 @@
   }
 
   .goal--loose {
-    &:after {
+    &::after {
       width: 141px;
       height: 193px;
       right: 92px;
@@ -138,7 +145,7 @@
   .goal__show {
     font-size: 20px;
 
-    &:after {
+    &::after {
       margin-left: 25px;
       background-image: url("../img/icon-right-arrow-verylong.svg");
       width: 34px;
@@ -146,19 +153,20 @@
       transition: 0.3s;
     }
 
-    &:hover:after {
+    &:hover::after {
       background-position-x: 0;
       transition: 0.3s;
     }
   }
 }
+
 @media (min-width: $desktop-width) {
   .goal {
     width: 570px;
     padding: 75px 62px 62px 53px;
     margin-bottom: 27px;
 
-    &:before {
+    &::before {
       width: 100px;
       height: 100px;
       top: 47px;
@@ -167,7 +175,7 @@
   }
 
   .goal--gain {
-    &:after {
+    &::after {
       width: 134px;
       height: 57px;
       top: 69px;
@@ -176,7 +184,7 @@
   }
 
   .goal--loose {
-    &:after {
+    &::after {
       width: 71px;
       height: 97px;
       top: 41px;

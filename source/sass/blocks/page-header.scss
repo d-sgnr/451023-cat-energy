@@ -1,7 +1,6 @@
 .page-header {
   display: flex;
   flex-direction: column;
-  max-width: 320px;
   position: relative;
   box-sizing: border-box;
   max-width: 1440px;
@@ -14,6 +13,7 @@
   width: 191px;
   height: 39px;
   transition: 0.3s;
+
   &:hover {
     opacity: 0.8;
     transition: 0.3s;
@@ -32,14 +32,14 @@
   border-bottom: 1px solid $light-grey;
   padding: 11px 20px 15px;
 }
+
 @media (max-width: $mobile-width-only) {
   .page-header__wrapper {
     width: 100%;
     box-sizing: border-box;
   }
-
-  .page-header__logo-img {}
 }
+
 @media (min-width: $tablet-width) {
   .page-header {
     flex-direction: row;
@@ -55,12 +55,10 @@
 
   .page-header__wrapper {
     border-bottom: none;
-  }
-
-  .page-header__wrapper {
     padding: 0;
   }
 }
+
 @media (min-width: $desktop-width) {
   .page-header {
     padding: 0;

@@ -15,8 +15,8 @@
   font-size: 16px;
   text-transform: uppercase;
   color: $black;
+
   @include o-regular;
-  box-sizing: content-box;
   flex-grow: 1;
   transition: 0.3s;
   box-sizing: border-box;
@@ -32,7 +32,7 @@
     outline: none;
     transition: 0.3s;
 
-    +.form__input-icon {
+    + .form__input-icon {
       fill: $green;
       transition: 0.3s;
     }
@@ -67,6 +67,7 @@
   font-size: 16px;
   text-transform: uppercase;
   color: $light-black;
+
   @include o-regular;
   margin-right: 16px;
 }
@@ -81,10 +82,11 @@
   font-size: 14px;
   text-transform: uppercase;
   color: $light-black;
+
   @include o-regular;
   margin-bottom: 39px;
   line-height: 1.29;
-      max-width: 226px;
+  max-width: 226px;
 }
 
 .form__checkbox {
@@ -140,6 +142,7 @@
   width: 100%;
   min-height: 150px;
   resize: none;
+  padding: 13px;
 }
 
 .form__choose {
@@ -150,10 +153,6 @@
 
 .form__footnote {
   text-align: center;
-}
-
-.form__button {
-  margin-bottom: 20px;
 }
 
 .form {
@@ -171,6 +170,7 @@
 .form__button {
   width: 100%;
   max-width: 280px;
+  margin-bottom: 20px;
 }
 
 .form__item-icon {
@@ -208,6 +208,7 @@
   justify-content: center;
   align-items: center;
   transition: 0.3s;
+  flex-shrink: 0;
 }
 
 .form__checkbox:checked + .form__checkbox-custom::before {
@@ -237,6 +238,7 @@
   justify-content: center;
   align-items: center;
   transition: 0.3s;
+  flex-shrink: 0;
 }
 
 .form__radio:checked + .form__radio-custom::before {
@@ -248,12 +250,9 @@
   border-radius: 100%;
 }
 
-.form__input--textarea {
-  padding: 13px;
-}
 @media (max-width: $mobile-width-only) {
   .form__choose {
-    &:before {
+    &::before {
       content: "";
       display: block;
       position: absolute;
@@ -264,7 +263,7 @@
       top: 0;
     }
 
-    &:after {
+    &::after {
       content: "";
       display: block;
       position: absolute;
@@ -292,11 +291,13 @@
     }
   }
 }
+
 @media (min-width: $tablet-width) {
   .form__input {
     padding: 16px 20px;
     box-sizing: border-box;
     font-size: 20px;
+    height: 57px;
   }
 
   .form__checkbox-custom {
@@ -332,7 +333,7 @@
     font-size: 20px;
     line-height: 1.5;
     margin-bottom: 64px;
-        max-width: 323px;
+    max-width: 323px;
   }
 
   .form__label {
@@ -400,6 +401,7 @@
     margin-bottom: 53px;
   }
 }
+
 @media (min-width: $desktop-width) {
   .form {
     margin-bottom: 72px;
@@ -418,6 +420,7 @@
   .form__basic {
     margin-right: 80px;
     flex-grow: 1;
+    margin-bottom: 0;
   }
 
   .form__choose {
@@ -439,10 +442,6 @@
   .form__wrapper--add {
     margin-bottom: 30px;
     justify-content: space-between;
-  }
-
-  .form__basic {
-    margin-bottom: 0;
   }
 
   .form__wrapper--basic {

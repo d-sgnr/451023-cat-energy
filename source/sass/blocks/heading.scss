@@ -1,6 +1,7 @@
 .heading {
   font-size: 36px;
   color: $black;
+
   @include o-regular;
   margin: 0;
 }
@@ -11,7 +12,7 @@
   display: inline-block;
   position: relative;
 
-  &:after {
+  &::after {
     content: "";
     display: block;
     background-color: $green;
@@ -27,18 +28,22 @@
 @media (max-width: $mobile-width-only) {
   .heading--line--big {
     line-height: 1;
-    &:after {
+
+    &::after {
       top: 30%;
     }
   }
+
   .heading--line--big span {
     display: block;
   }
 }
+
 @media (min-width: $tablet-width) {
   .heading {
     font-size: 60px;
     color: $black;
+
     @include o-regular;
   }
 
@@ -46,10 +51,12 @@
     font-size: 36px;
     margin-left: 37px;
     margin-bottom: 74px;
-    &:after {
+
+    &::after {
       margin-left: 37px;
     }
-    &:before {
+
+    &::before {
       content: "";
       display: block;
       background-color: $green;
@@ -61,12 +68,13 @@
       top: 50%;
     }
   }
-
 }
+
 @media (min-width: $desktop-width) {
   .heading {
     font-size: 60px;
     color: $black;
+
     @include o-regular;
   }
 

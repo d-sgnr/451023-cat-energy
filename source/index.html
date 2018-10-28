@@ -6,10 +6,14 @@
   <title>HTML Academy: Кэт энерджи — Главная</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
+
   <link rel="stylesheet" type="text/css" href="css/style.min.css">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="img/favicon.png">
 
-  <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-
+  <script src="http://api-maps.yandex.ru/2.1.69/?lang=ru_RU" type="text/javascript"></script>
+  <script src="js/picturefill.min.js"></script>
 </head>
 
 <body>
@@ -37,7 +41,7 @@
         <span></span>
       </button>
       <ul class="main-nav_list site-list">
-        <li class="site-list__item site-list__item--active site-list__item--active-index"><a href="">Главная</a></li>
+        <li class="site-list__item site-list__item--active site-list__item--active--index"><a href="">Главная</a></li>
         <li class="site-list__item"><a href="/catalog.html">Каталог продукции</a></li>
         <li class="site-list__item"><a href="/form.html">Подбор программы</a></li>
       </ul>
@@ -45,12 +49,14 @@
     </nav>
   </header>
 
-  <main class="page-main page-main--index">
+<div class="main-stable">
+  <main class="main-stable__main page-main page-main--index">
 
     <section class="adv-index">
+
       <h1 class="adv-index__heading heading">Функциональное питание для котов</h1>
       <div class="adv-index__call">Занялся собой? Займись котом!</div>
-      <div class="adv__img-wrapper">
+      <div class="adv-index__img-wrapper">
         <picture>
           <source type="image/webp" media="(min-width: 1200px)" srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@2x.webp 2x">
           <source media="(min-width: 1200px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
@@ -186,11 +192,12 @@
         </div>
 
       </div>
-      <section id="map" class="contacts__map map">
+      <section class="contacts__map-wrapper">
+        <div id="map" class="contacts__map"></div>
       </section>
     </section>
   </main>
-
+</div>
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <img src="img/logo-footer.svg" alt="" class="page-footer__logo" width="32" height="16">
@@ -219,6 +226,7 @@
     </div>
   </footer>
 
+  <script src="js/jquery.min.js"></script>
   <script src="js/script.js"></script>
 
 </body>

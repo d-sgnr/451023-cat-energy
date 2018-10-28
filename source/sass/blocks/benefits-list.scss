@@ -18,13 +18,7 @@
   position: relative;
   margin-bottom: 20px;
 
-  &:before {
-    display: none;
-  }
-}
-
-.benefits-list__item {
-  &:before {
+  &::before {
     content: "";
     display: block;
     background-color: $green;
@@ -39,17 +33,19 @@
 }
 
 .benefits-list__item--leaf {
-  &:before {
+  &::before {
     background-image: url("../img/advantage-leaf@1x.png");
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/advantage-leaf@2x.png");
-      }
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/advantage-leaf@2x.png");
+    }
   }
 }
 
 .benefits-list__item--eat {
-  &:before {
+  &::before {
     background-image: url("../img/advantage-dining@1x.png");
+
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/advantage-dining@2x.png");
     }
@@ -57,8 +53,9 @@
 }
 
 .benefits-list__item--water {
-  &:before {
+  &::before {
     background-image: url("../img/advantage-powder@1x.png");
+
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/advantage-powder@2x.png");
     }
@@ -66,13 +63,15 @@
 }
 
 .benefits-list__item--clock {
-  &:before {
+  &::before {
     background-image: url("../img/advantage-clock@1x.png");
+
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/advantage-clock@2x.png");
     }
   }
 }
+
 @media (min-width: $tablet-width) {
   .benefits-list {
     counter-reset: myCounter;
@@ -80,15 +79,25 @@
 
   .benefits-list__item {
     display: flex;
-    align-items: center;
     position: relative;
-    &:before {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 131px;
+
+    &::before {
       width: 80px;
       height: 80px;
+      margin-bottom: 33px;
     }
-    &:after {
+
+    &:nth-child(odd) {
+      margin-right: 138px;
+    }
+
+    &::after {
       counter-increment: myCounter;
       content: counter(myCounter);
+
       @include o-regular;
       text-align: center;
       position: absolute;
@@ -102,18 +111,6 @@
     }
   }
 
-  .benefits-list__item {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 131px;
-    &:before {
-      margin-bottom: 33px;
-    }
-    &:nth-child(odd) {
-      margin-right: 138px;
-    }
-  }
-
   .benefits-list__text {
     width: 245px;
   }
@@ -123,10 +120,13 @@
     height: 80px;
   }
 }
+
 @media (min-width: $desktop-width) {
   .benefits-list__item {
+    width: 20%;
+    align-items: flex-start;
 
-    &:after {
+    &::after {
       left: auto;
       right: 0;
     }
@@ -138,10 +138,5 @@
 
   .benefits-list {
     justify-content: space-between;
-  }
-
-  .benefits-list__item {
-    width: 20%;
-    align-items: flex-start;
   }
 }
