@@ -6,113 +6,28 @@
   <title>HTML Academy: Кэт энерджи — Форма</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" type="text/css" href="css/style.min.css">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <script src="js/picturefill.min.js"></script>
+
 </head>
 
 <body>
-  <svg style="display:none">
-    <symbol id="logo-footer">
-      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 127.8 23.4" style="enable-background:new 0 0 127.8 23.4;" xml:space="preserve">
-        <style type="text/css">
-          .st0 {
-            fill: #111111;
-          }
-        </style>
-        <g>
-          <path class="st0" d="M1.6,21.5c-1-1.3-1.6-3.2-1.6-5.6V7.6c0-2.5,0.5-4.4,1.5-5.7C2.6,0.6,4.3,0,6.8,0c2.4,0,4.1,0.6,5.1,1.7
-          c1,1.1,1.5,2.8,1.5,4.9v2H8.5V6.3c0-0.9-0.1-1.6-0.3-2S7.6,3.5,6.8,3.5c-0.7,0-1.2,0.2-1.4,0.7S5.1,5.5,5.1,6.4v10.7
-          c0,0.9,0.1,1.6,0.4,2.1c0.2,0.5,0.7,0.7,1.4,0.7c0.7,0,1.1-0.2,1.3-0.7c0.2-0.5,0.3-1.2,0.3-2.1v-2.4h4.9v2c0,2.1-0.5,3.8-1.5,5
-          c-1,1.2-2.7,1.8-5.1,1.8C4.4,23.4,2.6,22.8,1.6,21.5z" />
-          <path class="st0" d="M19.3,0.3h5.7l4.2,22.8h-4.6l-0.8-4.8h-3.3l-0.8,4.8H15L19.3,0.3z M23.4,15.3l-1.2-8.9L21,15.3H23.4z" />
-          <path class="st0" d="M32.7,4.1h-3.4V0.3h11.9v3.7h-3.4v19.1h-5.1V4.1z" />
-          <path class="st0" d="M50.3,0.3h8.8v2.4h-5.7v7.5h4.6v2.3h-4.6v8.4h5.7v2.3h-8.9V0.3z" />
-          <path class="st0" d="M61.7,0.3h2.2l6.5,15.1V0.3h2.6v22.8h-2L64.4,7.5v15.6h-2.7V0.3z" />
-          <path class="st0" d="M76,0.3h8.8v2.4h-5.7v7.5h4.6v2.3h-4.6v8.4h5.7v2.3H76V0.3z" />
-          <path class="st0" d="M87.4,0.3H92c2.3,0,4,0.5,5.1,1.4c1.1,0.9,1.6,2.5,1.6,4.6c0,2.9-0.9,4.7-2.8,5.3l3.2,11.4H96l-3-10.7h-2.5
-          v10.7h-3.2V0.3z M91.8,10.1c1.4,0,2.3-0.3,2.9-0.8c0.6-0.5,0.9-1.5,0.9-3c0-0.9-0.1-1.7-0.3-2.2c-0.2-0.5-0.6-0.9-1.1-1.2
-          c-0.5-0.3-1.3-0.4-2.2-0.4h-1.4v7.5H91.8z" />
-          <path class="st0" d="M102.7,21.4c-0.9-1.3-1.4-3.2-1.4-5.8V8c0-1.8,0.2-3.2,0.5-4.3c0.4-1.1,1-2,1.9-2.6s2.1-0.9,3.7-0.9
-          c2.1,0,3.6,0.5,4.5,1.6s1.4,2.7,1.4,5v0.8h-3V6.9c0-1.1-0.1-1.9-0.2-2.5c-0.1-0.6-0.4-1-0.8-1.3c-0.4-0.3-1-0.5-1.9-0.5
-          c-0.9,0-1.5,0.2-2,0.6s-0.7,0.9-0.8,1.6s-0.2,1.6-0.2,2.7V16c0,1.7,0.2,3,0.6,3.8c0.4,0.8,1.2,1.1,2.4,1.1c1.2,0,2-0.4,2.4-1.2
-          c0.4-0.8,0.7-2.1,0.7-4v-1.6h-2.9v-2.3h5.8v11.3h-2l-0.3-2.6c-0.7,1.9-2.1,2.9-4.1,2.9C105.1,23.4,103.6,22.7,102.7,21.4z" />
-          <path class="st0" d="M119.8,15.1l-4.9-14.7h3l3.5,11l3.4-11h3l-4.9,14.7v8h-3V15.1z" />
-        </g>
-      </svg>
-    </symbol>
 
-    <symbol id="icon-vk">
-      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30.004px" height="15.761px" viewBox="3.007 11.628 30.004 15.761" enable-background="new 3.007 11.628 30.004 15.761"
-        xml:space="preserve">
-        <g>
-          <path d="M26.945,27.388c-0.386,0-1.17-0.082-2.075-0.632c-0.642-0.385-1.223-0.968-1.784-1.532
-          c-0.438-0.44-1.171-1.177-1.447-1.177c-0.268,0.075-0.481,0.921-0.476,1.569c0.004,0.113-0.001,0.774-0.468,1.213
-          c-0.425,0.4-1.088,0.485-1.216,0.498l-1.926,0.007c-0.967,0-4.358-0.218-7.429-3.021c-3.674-3.358-6.835-9.798-6.968-10.07
-          c-0.197-0.462-0.248-1.066,0.152-1.482c0.392-0.413,1.081-0.472,1.359-0.479l4.083-0.024l0.115,0.008
-          c0.091,0.014,0.567,0.095,0.957,0.349c0.388,0.247,0.59,0.651,0.626,0.73c0.01,0.021,0.649,1.432,1.475,2.684
-          c1.312,1.99,1.896,2.455,2.103,2.562c0.188-0.417,0.277-1.7,0.187-2.871c0.001-0.493-0.101-1.098-0.252-1.278
-          c-0.112-0.134-0.426-0.253-0.778-0.294l-0.722-0.691c-0.096-0.658,0.635-1.226,1.149-1.446c0.737-0.316,1.792-0.382,3.147-0.382
-          l0.71,0.005c1.235,0.012,1.622,0.081,2.149,0.191c1.702,0.361,1.64,1.729,1.567,3.312c-0.021,0.464-0.046,1.001-0.046,1.621
-          c0,0.151-0.005,0.312-0.011,0.479c-0.012,0.38-0.032,1.038,0.093,1.304c0.219-0.145,0.852-0.665,2.072-2.483
-          c0.783-1.165,1.4-2.539,1.517-2.803l0.001-0.001c0.182-0.43,0.608-0.941,1.613-0.946l4.274-0.024
-          c0.012-0.003,0.172-0.016,0.377-0.016c0.98,0,1.597,0.287,1.832,0.854c0.269,0.65,0.169,1.657-2.354,4.605
-          c-0.37,0.432-0.697,0.804-0.982,1.127c-0.598,0.678-1.216,1.379-1.237,1.595c0.053,0.169,0.662,0.665,1.252,1.145
-          c1.53,1.247,2.528,2.264,3.033,3.073c0.522,0.759,0.429,1.33,0.258,1.677c-0.424,0.864-1.638,0.973-1.877,0.985l-3.79,0.047
-          C27.153,27.382,27.063,27.388,26.945,27.388z M21.638,22.548c0.899,0,1.682,0.786,2.511,1.618c0.497,0.5,1.011,1.016,1.496,1.307
-          c0.727,0.44,1.316,0.421,1.398,0.412l0.103-0.009l3.805-0.047c0.171-0.012,0.411-0.073,0.536-0.136
-          c-0.018-0.039-0.048-0.094-0.098-0.167c-0.449-0.718-1.388-1.659-2.686-2.718c-1.184-0.963-1.801-1.465-1.865-2.244
-          c-0.066-0.805,0.493-1.439,1.607-2.703c0.28-0.318,0.604-0.685,0.967-1.109c1.559-1.821,1.957-2.64,2.058-2.956
-          c-0.17-0.029-0.648-0.021-0.678-0.018l-4.361,0.028c-0.191,0.001-0.249,0.035-0.249,0.036c-0.176,0.414-0.812,1.812-1.644,3.05
-          c-1.895,2.82-2.785,3.2-3.407,3.201c-0.204,0-0.396-0.05-0.569-0.148c-1.003-0.569-0.963-1.834-0.934-2.757
-          c0.005-0.149,0.01-0.295,0.01-0.431c0-0.646,0.025-1.207,0.048-1.689c0.076-1.68,0.016-1.692-0.379-1.776
-          c-0.409-0.086-0.705-0.147-1.856-0.159l-0.693-0.005c-0.624,0-1.343,0.014-1.906,0.098c0.092,0.074,0.18,0.157,0.259,0.251
-          c0.588,0.704,0.604,1.951,0.601,2.194c0.13,1.646,0.061,3.796-1.018,4.313c-0.191,0.092-0.392,0.137-0.597,0.137
-          c-0.926,0-1.854-0.885-3.425-3.267c-0.895-1.354-1.56-2.824-1.587-2.887c-0.011-0.021-0.054-0.077-0.075-0.094
-          c-0.083-0.054-0.233-0.097-0.32-0.116l-4.001,0.024c-0.021,0.001-0.045,0.002-0.07,0.005c0.591,1.189,3.426,6.592,6.519,9.419
-          c2.74,2.502,5.826,2.629,6.417,2.629l1.851-0.003c0.046-0.01,0.218-0.062,0.269-0.1c-0.019,0.018-0.01-0.053-0.01-0.097
-          c-0.003-0.265,0.012-2.595,1.578-3.034C21.369,22.566,21.502,22.548,21.638,22.548z" />
-        </g>
-      </svg>
-    </symbol>
+  <div style="display:none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
 
-    <symbol id="icon-insta">
-      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23px" height="23px" viewBox="-3 -3 23 23" enable-background="new -3 -3 23 23" xml:space="preserve">
-        <path d="M14.002-1.501c2.48,0,4.498,2.02,4.498,4.501v11c0,2.481-2.018,4.5-4.498,4.5H3.01
-        c-2.48,0-4.498-2.019-4.498-4.5V3c0-2.481,2.018-4.5,4.498-4.5h10.992 M14.002-3H3.01C-0.29-3-2.987-0.301-2.987,3v11.001
-        C-2.987,17.299-0.29,20,3.01,20h10.995C17.301,20,20,17.299,20,13.999V3C20-0.301,17.301-3,14.002-3L14.002-3z" />
-        <path d="M8.506,4.078c2.44,0,4.429,1.985,4.429,4.428c0,2.44-1.989,4.43-4.429,4.43c-2.443,0-4.428-1.989-4.428-4.43
-        C4.078,6.063,6.063,4.078,8.506,4.078 M8.506,2.578c-3.273,0-5.928,2.654-5.928,5.928s2.654,5.927,5.928,5.927
-        c3.274,0,5.926-2.653,5.926-5.927S11.78,2.578,8.506,2.578L8.506,2.578z" />
-        <circle cx="14.646" cy="2.379" r="1.341" />
-      </svg>
-    </symbol>
-
-    <symbol id="icon-fb">
-      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13.518px" height="27.75px" viewBox="34.789 -4.709 13.518 27.75" enable-background="new 34.789 -4.709 13.518 27.75"
-        xml:space="preserve">
-        <g>
-          <path d="M44.32,23.041h-6.816V10.137h-2.715V3.763h2.629c-0.202-2.887,0.298-5,1.519-6.444c1.039-1.229,2.583-1.911,4.588-2.026
-          l4.782-0.001v6.15h-3.755c-0.166,0.315-0.251,1.093-0.252,2.321h3.978v6.375H44.32V23.041z M39.004,21.541h3.816V8.637h3.957V5.263
-          h-3.953l-0.016-0.734c-0.044-2.04,0.002-3.784,1.007-4.46l0.19-0.127h2.801v-3.15h-3.239c-1.557,0.091-2.711,0.581-3.485,1.496
-          c-1.041,1.231-1.41,3.298-1.099,6.144l0.092,0.832h-2.786v3.375h2.715V21.541z" />
-        </g>
-      </svg>
-    </symbol>
-
-    <symbol id="icon-tick">
-      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 21.1 15.5" style="enable-background:new 0 0 21.1 15.5;" xml:space="preserve">
-        <polygon points="20.1,0 7.7,13.3 1,6.1 0,7.2 7.6,15.4 7.7,15.5 21,1.2 21.1,1.1 "/>
-      </svg>
-    </symbol>
-
-    <symbol id="logo-academy">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 68">
-        <path d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z" /></svg>
-    </symbol>
-  </svg>
   <header class="page-header">
 
     <div class="page-header__wrapper">
-      <a class="page-header__logo">
+      <a href="/" class="page-header__logo">
         <picture>
           <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -121,34 +36,34 @@
       </a>
     </div>
 
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle">
         <span></span>
       </button>
       <ul class="main-nav_list site-list">
-        <li class="site-list__item"><a href="">Главная</a></li>
-        <li class="site-list__item"><a href="">Каталог продукции</a></li>
-        <li class="site-list__item"><a href="">Подбор программы</a></li>
+        <li class="site-list__item"><a href="/">Главная</a></li>
+        <li class="site-list__item"><a href="/catalog.html">Каталог продукции</a></li>
+        <li class="site-list__item site-list__item--active"><a href="">Подбор программы</a></li>
       </ul>
 
     </nav>
   </header>
-
-  <main class="page-main">
+<div class="main-stable">
+  <main class="main-stable__main page-main">
     <div class="page-main__wrap">
       <h1 class="page-main__heading page-main__heading--form heading">Подбор программы</h1>
       <section class="form">
-        <form action="https://echo.htmlacademy.ru" class="form__form-program">
-          <div class="form__text">Заполните анкету и мы подберем <br> программу питания для вашего кота</div>
-          <div class="form__wrapper">
+        <form id="form" action="https://echo.htmlacademy.ru" onsubmit="return validateForm()" class="form__form-program">
+          <div class="form__text">Заполните анкету и мы подберем программу питания для вашего кота</div>
+          <div class="form__wrapper form__wrapper--basic">
 
             <div class="form__basic">
               <div class="form__item-wrapper">
-                <label class="form__label" for="name">Имена:*</label><input id="name" class="form__input" name="name" placeholder="Барсик" required>
+                <label class="form__label" for="name">Имя:*</label><input id="name" class="form__input" name="name" placeholder="Барсик" required="">
               </div>
 
               <div class="form__item-wrapper">
-                <label class="form__label" for="weight">Вес (кг):*</label><input id="weight" class="form__input" name="weight" placeholder="7" required>
+                <label class="form__label" for="weight">Вес (кг):*</label><input id="weight" class="form__input" name="weight" placeholder="7" required="">
               </div>
 
               <div class="form__item-wrapper">
@@ -159,20 +74,20 @@
 
             <div class="form__choose">
 
-              <label for="goal-choice-1" class="form__label form__item-wrapper form__item-margin--top">
-                <input class="form__radio" id="goal-choice-1" type="radio" name="checkbox-test" name="goal" value="lose" checked>
+              <label for="goal-choice-1" class="form__label form__choose-item form__item-wrapper">
+                <input class="form__radio" id="goal-choice-1" type="radio" name="checkbox-test" value="lose" checked="">
                 <span class="form__radio-custom"></span>
                 <span class="label">Похудение</span>
               </label>
 
-              <label for="goal-choice-2" class="form__label form__item-wrapper">
-                <input class="form__radio" id="goal-choice-2" type="radio" name="checkbox-test" name="goal" value="gain">
+              <label for="goal-choice-2" class="form__label form__choose-item form__item-wrapper">
+                <input class="form__radio" id="goal-choice-2" type="radio" name="checkbox-test" value="gain">
                 <span class="form__radio-custom"></span>
                 <span class="label">Набор массы</span>
               </label>
 
-              <label for="goal-choice-3" class="form__label form__item-wrapper form__item-margin--bottom">
-                <input class="form__radio" id="goal-choice-3" type="radio" name="checkbox-test" name="goal" value="advice">
+              <label for="goal-choice-3" class="form__label form__choose-item form__item-wrapper">
+                <input class="form__radio" id="goal-choice-3" type="radio" name="checkbox-test" value="advice">
                 <span class="form__radio-custom"></span>
                 <span class="label">Не знаю (нужен ваш совет)</span>
               </label>
@@ -182,14 +97,19 @@
           </div>
 
           <div class="form__contacts">
-            <h2 class="form__heading heading heading--line">Контактные данные
-              (владельца кота)</h2>
+            <h2 class="form__heading heading heading--line heading--line--big">Контактные данные <span>(владельца кота)</span></h2>
             <div class="form__wrapper">
-              <div class="form__item-wrapper form__item-icon--email form__item-icon form__item-margin--right form__item-long">
-                <label class="form__label" for="mail">E-mail:*</label><input id="mail" class="form__input" name="mail" placeholder="kuklachev@gmail.com" required>
+              <div class="form__item-wrapper form__item-icon form__item-margin form__item-margin--right form__item-long">
+                <label class="form__label" for="mail">E-mail:*</label><input id="mail" class="form__input form__input--with-icon" name="mail" placeholder="kuklachev@gmail.com" required="">
+                <svg class="form__input-icon form__input-icon--mail" width="18" height="14">
+                  <use xlink:href="#icon-mail"></use>
+                </svg>
               </div>
-              <div class="form__item-wrapper form__item-icon--phone form__item-icon form__item-long">
-                <label class="form__label" for="phone">Телефон:*</label><input id="phone" class="form__input" name="phone" placeholder="8 (960) 900-60-90" required>
+              <div class="form__item-wrapper form__item-icon form__item-long">
+                <label class="form__label" for="phone">Телефон:*</label><input id="phone" class="form__input form__input--with-icon" name="phone" placeholder="8 (960) 900-60-90" required="">
+                <svg class="form__input-icon form__input-icon--phone" width="21" height="21">
+                  <use xlink:href="#icon-phone"></use>
+                </svg>
               </div>
             </div>
 
@@ -202,30 +122,30 @@
           </div>
 
           <div class="form__add">
-            <h2 class="form__heading heading heading--line">Дополнительно</h2>
+            <h2 class="form__heading form__heading--add heading heading--line">Дополнительно</h2>
             <div class="form__wrapper form__wrapper--add">
 
 
-              <label for="sweetener" class="form__additem form__label">
-                <input class="form__checkbox" id="sweetener" type="checkbox" name="checkbox-test" name="add" value="sweetener" checked>
+              <label for="sweetener" class="form__add-item form__label">
+                <input class="form__checkbox" id="sweetener" type="checkbox" name="checkbox-test" value="sweetener" checked="">
                 <span class="form__checkbox-custom"></span>
                 <span class="label">Сахарозаменитель</span>
               </label>
 
-              <label for="water" class="form__additem form__label">
-                <input class="form__checkbox" id="water" type="checkbox" name="checkbox-test" name="add" value="water">
+              <label for="water" class="form__add-item form__label">
+                <input class="form__checkbox" id="water" type="checkbox" name="checkbox-test" value="water">
                 <span class="form__checkbox-custom"></span>
                 <span class="label">Питьевая вода</span>
               </label>
 
-              <label for="milk" class="form__additem form__label">
-                <input class="form__checkbox" id="milk" type="checkbox" name="checkbox-test" name="add" value="milk">
+              <label for="milk" class="form__add-item form__label">
+                <input class="form__checkbox" id="milk" type="checkbox" name="checkbox-test" value="milk">
                 <span class="form__checkbox-custom"></span>
                 <span class="label">Молоко</span>
               </label>
 
-              <label for="vitamins" class="form__additem form__label">
-                <input class="form__checkbox" id="vitamins" type="checkbox" name="checkbox-test" name="add" value="vitamins">
+              <label for="vitamins" class="form__add-item form__label">
+                <input class="form__checkbox" id="vitamins" type="checkbox" name="checkbox-test" value="vitamins">
                 <span class="form__checkbox-custom"></span>
                 <span class="label">Витамины</span>
               </label>
@@ -235,7 +155,7 @@
           </div>
 
           <div class="form__wrapper form__wrapper--bottom">
-            <button class="form__button button" type="submit">Отправить заявку</button>
+            <button class="form__button button button--colored" type="submit">Отправить заявку</button>
             <div class="form__footnote simple-text">* — Обязательные поля</div>
           </div>
 
@@ -246,45 +166,54 @@
 
     <section class="contacts contacts--bg">
       <div class="contacts__wrapper">
-        <b class="contacts__call">приглашаем
-          <br>к сотрудничеству<br>
-          дилеров!</b>
-        <div class="contacts__address simple-text">ул. Большая<br> Конюшенная, д. 19/8 <br><span>Санкт-Петербург</span></div>
+        <div class="contacts__card">
+          <b class="contacts__call">приглашаем
+            к сотрудничеству
+            дилеров!</b>
+          <div class="contacts__address simple-text">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></div>
+        </div>
+
       </div>
-      <section class="contacts__map map">
+      <section class="contacts__map-wrapper">
+        <div id="map" class="contacts__map"></div>
       </section>
     </section>
   </main>
+</div>
 
-  <footer class="page-footer">
-    <svg class="page-footer__logo" width="32" height="16">
-      <use xlink:href="#logo-footer"></use>
-    </svg>
+<footer class="page-footer">
+  <div class="page-footer__wrapper">
+    <img src="img/logo-footer.svg" alt="" class="page-footer__logo" width="32" height="16">
     <div class="page-footer__social">
       <a href="" class="page-footer__social-icon page-footer__social-icon--vk">
         <svg class="" width="16" height="16">
           <use xlink:href="#icon-vk"></use>
         </svg>
+        <div class="visually-hidden">Переход на страницу Cat Energy Вконтакте</div>
       </a>
       <a href="" class="page-footer__social-icon page-footer__social-icon--inst">
         <svg class="" width="16" height="16">
           <use xlink:href="#icon-insta"></use>
         </svg>
+        <div class="visually-hidden">Переход на страницу Cat Energy Instagram</div>
       </a>
       <a href="" class="page-footer__social-icon page-footer__social-icon--fb">
         <svg class="" width="16" height="16">
           <use xlink:href="#icon-fb"></use>
         </svg>
+        <div class="visually-hidden">Переход на страницу Cat Energy Facebook</div>
       </a>
     </div>
-    <div class="page-footer__wrapper">
+    <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__agency-link">
       <div class="page-footer__agency">HTML Academy</div>
-      <svg class="page-footer__logo-agency" width="27" height="34">
-        <use xlink:href="#logo-academy"></use>
-      </svg>
-    </div>
-  </footer>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.4 50" class="page-footer__logo-agency" width="27" height="34">
+        <path d="M19.9 0h-.2L0 2.1v36.2L19.7 50l19.7-11.7V2.1L19.9 0zm17 36.8L19.7 47 2.5 36.8V22l17.1 10.2V34L7.9 27v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7L2.6 20l17-10.2 17.2 10zm.1-1.8L19.6 7.8 2.5 18V4.4l17.2-1.8 17.2 1.8V18z" /></svg>
+        <div class="visually-hidden">Переход на сайт HTML Academy</div>
+    </a>
+  </div>
+</footer>
 
-</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/script.js"></script>
 
 </html>

@@ -1,15 +1,19 @@
 .goals-block {
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 }
+
 @media (min-width: $tablet-width) {
   .goals-block {
-    margin-bottom: 21px;
+    margin-bottom: 26px;
   }
 }
+
 @media (min-width: $desktop-width) {
   .goals-block {
+    display: flex;
+    justify-content: space-between;
     flex-direction: row;
-    margin-bottom: 49px;
   }
 }

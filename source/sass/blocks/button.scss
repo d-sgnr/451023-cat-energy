@@ -2,10 +2,10 @@
   background-color: $green;
   height: 40px;
   text-decoration: none;
+
   @include o-regular;
   font-size: 16px;
   line-height: 1.25;
-  align-items: center;
   font-weight: normal;
   font-style: normal;
   color: #ffffff;
@@ -16,7 +16,37 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
 }
+
+.button--colored {
+  transition: 0.3s;
+
+  &:hover {
+    background-color: $dark-green;
+    transition: 0.3s;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    transition: 0.3s;
+  }
+}
+
+.button--bw {
+  transition: 0.3s;
+
+  &:hover {
+    background-color: #ebebeb;
+    transition: 0.3s;
+  }
+
+  &:active {
+    transition: 0.3s;
+    color: rgba(68, 68, 68, 0.3);
+  }
+}
+
 @media (min-width: $tablet-width) {
   .button {
     height: 52px;

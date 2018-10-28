@@ -6,6 +6,7 @@
 .example__text {
   margin-top: 0;
   margin-bottom: 27px;
+  width: 266px;
 }
 
 .example__overall {
@@ -19,20 +20,26 @@
 .example__header {
   margin-bottom: 33px;
 }
-@media (max-width: 767px) {
+
+@media (max-width: $mobile-width-only) {
   .example {
     background-color: $bg-grey;
-    padding: 33px 0 38px;
+    padding: 46px 0 38px;
   }
 
   .example__facts-block {
     text-align: center;
-    margin-bottom: 44px;
+    margin-bottom: 37px;
   }
 }
+
 @media (min-width: $tablet-width) {
+  .example {
+    padding-top: 12px;
+  }
+
   .example__header {
-    margin: 50px 0 60px;
+    margin-bottom: 60px;
   }
 
   .example__wrapper {
@@ -44,7 +51,7 @@
 
   .example__text {
     width: 100%;
-    margin-bottom: 56px;
+    margin-bottom: 48px;
   }
 
   .example__facts-block {
@@ -58,7 +65,7 @@
     align-items: flex-end;
     font-size: 20px;
     line-height: 1;
-    margin-top: 16px;
+    margin-top: 13px;
   }
 
   .example__overall span {
@@ -73,25 +80,32 @@
     position: relative;
   }
 }
+
 @media (min-width: $tablet-width) and (max-width: 1199px) {
   .example__before-after {
     background: linear-gradient(to right, $bg-grey 50%, $bg-darker-grey 50%);
     height: 462px;
-    margin-top: 197px;
+    margin-top: 192px;
   }
 }
+
 @media (min-width: $desktop-width) {
+  .example {
+    padding: 0;
+  }
+
   .example__header {
-    margin: 65px 0;
+    margin-bottom: 65px;
+    line-height: 1;
   }
 
   .example__bg {
-    background-color: $bg-grey;
+    background: $bg-grey;
     min-height: 462px;
   }
 
   .example__wrapper {
-    width: 1200px;
+    width: 1220px;
     margin: auto;
     padding: 75px 0 67px;
     box-sizing: border-box;
@@ -109,8 +123,9 @@
 
   .example__before-after {
     position: absolute;
-    top: -191px;
-    right: 16px;
+    top: -174px;
+    left: 50%;
+    margin-left: -37px;
   }
 
   .example__overall {

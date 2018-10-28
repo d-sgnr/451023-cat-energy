@@ -1,17 +1,30 @@
 .contacts__wrapper {
+  max-width: 320px;
+  margin: auto;
+}
+
+.contacts__card {
   display: flex;
   justify-content: space-between;
   padding: 31px 20px 26px;
-  max-width: 320px;
-  margin: auto;
 }
 
 .contacts__call {
   text-transform: uppercase;
   font-size: 16px;
   color: $black;
+
   @include o-regular;
   line-height: 1.25;
+  max-width: 155px;
+}
+
+.contacts__address {
+  width: 157px;
+}
+
+.contacts__card span {
+  display: block;
 }
 
 .contacts__address.simple-text {
@@ -21,17 +34,61 @@
 .contacts--bg {
   background-color: $bg-grey;
 }
-@media (min-width: $tablet-width) {
-  .contacts {}
 
+.contacts__map {
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+}
+
+.contacts__map-wrapper {
+  position: relative;
+  height: 362px;
+  background-image: url("../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    content: "";
+    background-image: url("../img/map-pin.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 55px;
+    height: 53px;
+    position: absolute;
+    z-index: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
   .contacts__wrapper {
-    padding: 71px 69px 72px 62px;
     max-width: 708px;
   }
 
-  .contacts__wrapper span {
+  .contacts__map-wrapper {
+    height: 400px;
+    background-image: url("../img/bg-map-tablet@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-map-tablet@2x.png");
+    }
+
+    &::after {
+      width: 113px;
+      height: 106px;
+    }
+  }
+
+  .contacts__card {
+    padding: 65px 41px 57px;
+  }
+
+  .contacts__card span {
     margin-top: 14px;
-    display: block;
   }
 
   .contacts__call {
@@ -43,9 +100,26 @@
     text-align: right;
   }
 }
+
 @media (min-width: $desktop-width) {
   .contacts--bg {
     background-color: none;
+  }
+
+  .contacts__map-wrapper {
+    background-image: url("../img/bg-map-desktop@1x.png");
+    z-index: 100;
+    position: relative;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-map-desktop@2x.png");
+    }
+
+    &::after {
+      right: 50%;
+      margin-right: -398px;
+      top: 157px;
+    }
   }
 
   .contacts {
@@ -53,11 +127,17 @@
   }
 
   .contacts__wrapper {
-    background: white;
+    width: 1220px;
     position: absolute;
-    width: 570px;
-    left: 110px;
+    z-index: 150;
+    left: 50%;
+    margin-left: -610px;
     top: 95px;
+  }
+
+  .contacts__card {
+    background: white;
+    width: 570px;
     padding: 66px 90px 59px 76px;
     box-sizing: border-box;
   }
