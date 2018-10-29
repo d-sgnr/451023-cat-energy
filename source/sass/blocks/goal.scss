@@ -68,9 +68,9 @@
   font-size: 16px;
   text-decoration: none;
   color: $black;
-  display: flex;
   align-items: center;
   transition: 0.3s;
+  display: inline-block;
 
   &::after {
     content: "";

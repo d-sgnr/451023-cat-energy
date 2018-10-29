@@ -167,12 +167,15 @@
 
 @media (min-width: $desktop-width) {
   .before-after__wrapper {
+    margin-top: -174px;
+    position: relative;
+
     &::after {
       position: absolute;
       content: "";
       background: $bg-darker-grey;
       height: 100%;
-      width: 397px;
+      width: 9999px;
       top: 174px;
       margin: 0;
       z-index: 0;
@@ -186,8 +189,10 @@
   }
 
   .before-after__img--after {
-    width: 365px;
+    width: 360px;
     z-index: 50;
     margin-bottom: 35px;
+    height: 517px;
+    top: -21px;
   }
 }

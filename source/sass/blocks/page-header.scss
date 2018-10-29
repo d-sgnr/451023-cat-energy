@@ -13,7 +13,9 @@
   width: 191px;
   height: 39px;
   transition: 0.3s;
+}
 
+.page-header__logo:not(.page-header__logo--index) {
   &:hover {
     opacity: 0.8;
     transition: 0.3s;
@@ -72,14 +74,9 @@
     height: 60px;
   }
 
-  .page-header--index {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  .page-header--index .site-list a {
+    @include o-regular;
+    font-size: 20px;
+    color: white;
   }
 }

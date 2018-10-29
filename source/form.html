@@ -13,9 +13,7 @@
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="icon" type="image/png" href="img/favicon.png">
 
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <script src="js/picturefill.min.js"></script>
-
 </head>
 
 <body>
@@ -38,22 +36,22 @@
 
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle">
-        <span></span>
+        <span class="visually-hidden">Меню сайта</span>
       </button>
       <ul class="main-nav_list site-list">
         <li class="site-list__item"><a href="/">Главная</a></li>
         <li class="site-list__item"><a href="/catalog.html">Каталог продукции</a></li>
-        <li class="site-list__item site-list__item--active"><a href="">Подбор программы</a></li>
+        <li class="site-list__item site-list__item--active"><a>Подбор программы</a></li>
       </ul>
 
     </nav>
   </header>
-<div class="main-stable">
-  <main class="main-stable__main page-main">
+
+  <main class="page-main">
     <div class="page-main__wrap">
       <h1 class="page-main__heading page-main__heading--form heading">Подбор программы</h1>
       <section class="form">
-        <form id="form" action="https://echo.htmlacademy.ru" onsubmit="return validateForm()" class="form__form-program">
+        <form id="form" method="post" action="https://echo.htmlacademy.ru" onsubmit="return validateForm()" class="form__form-program">
           <div class="form__text">Заполните анкету и мы подберем программу питания для вашего кота</div>
           <div class="form__wrapper form__wrapper--basic">
 
@@ -75,20 +73,17 @@
             <div class="form__choose">
 
               <label for="goal-choice-1" class="form__label form__choose-item form__item-wrapper">
-                <input class="form__radio" id="goal-choice-1" type="radio" name="checkbox-test" value="lose" checked="">
-                <span class="form__radio-custom"></span>
+                <input class="visually-hidden form__radio" id="goal-choice-1" type="radio" name="goal" value="lose" checked="">
                 <span class="label">Похудение</span>
               </label>
 
               <label for="goal-choice-2" class="form__label form__choose-item form__item-wrapper">
-                <input class="form__radio" id="goal-choice-2" type="radio" name="checkbox-test" value="gain">
-                <span class="form__radio-custom"></span>
+                <input class="visually-hidden form__radio" id="goal-choice-2" type="radio" name="goal" value="gain">
                 <span class="label">Набор массы</span>
               </label>
 
               <label for="goal-choice-3" class="form__label form__choose-item form__item-wrapper">
-                <input class="form__radio" id="goal-choice-3" type="radio" name="checkbox-test" value="advice">
-                <span class="form__radio-custom"></span>
+                <input class="visually-hidden form__radio" id="goal-choice-3" type="radio" name="goal" value="advice">
                 <span class="label">Не знаю (нужен ваш совет)</span>
               </label>
 
@@ -100,13 +95,13 @@
             <h2 class="form__heading heading heading--line heading--line--big">Контактные данные <span>(владельца кота)</span></h2>
             <div class="form__wrapper">
               <div class="form__item-wrapper form__item-icon form__item-margin form__item-margin--right form__item-long">
-                <label class="form__label" for="mail">E-mail:*</label><input id="mail" class="form__input form__input--with-icon" name="mail" placeholder="kuklachev@gmail.com" required="">
+                <label class="form__label" for="mail">E-mail:*</label><input id="mail" type="email" class="form__input form__input--with-icon" name="mail" placeholder="kuklachev@gmail.com" required="">
                 <svg class="form__input-icon form__input-icon--mail" width="18" height="14">
                   <use xlink:href="#icon-mail"></use>
                 </svg>
               </div>
               <div class="form__item-wrapper form__item-icon form__item-long">
-                <label class="form__label" for="phone">Телефон:*</label><input id="phone" class="form__input form__input--with-icon" name="phone" placeholder="8 (960) 900-60-90" required="">
+                <label class="form__label" for="phone">Телефон:*</label><input id="phone" type="tel" class="form__input form__input--with-icon" name="phone" placeholder="8 (960) 900-60-90" required="">
                 <svg class="form__input-icon form__input-icon--phone" width="21" height="21">
                   <use xlink:href="#icon-phone"></use>
                 </svg>
@@ -127,26 +122,22 @@
 
 
               <label for="sweetener" class="form__add-item form__label">
-                <input class="form__checkbox" id="sweetener" type="checkbox" name="checkbox-test" value="sweetener" checked="">
-                <span class="form__checkbox-custom"></span>
+                <input class="visually-hidden form__checkbox" id="sweetener" type="checkbox" name="sweetener" checked="">
                 <span class="label">Сахарозаменитель</span>
               </label>
 
               <label for="water" class="form__add-item form__label">
-                <input class="form__checkbox" id="water" type="checkbox" name="checkbox-test" value="water">
-                <span class="form__checkbox-custom"></span>
+                <input class="visually-hidden form__checkbox" id="water" type="checkbox" name="water">
                 <span class="label">Питьевая вода</span>
               </label>
 
               <label for="milk" class="form__add-item form__label">
-                <input class="form__checkbox" id="milk" type="checkbox" name="checkbox-test" value="milk">
-                <span class="form__checkbox-custom"></span>
+                <input class="visually-hidden form__checkbox" id="milk" type="checkbox" name="milk">
                 <span class="label">Молоко</span>
               </label>
 
               <label for="vitamins" class="form__add-item form__label">
-                <input class="form__checkbox" id="vitamins" type="checkbox" name="checkbox-test" value="vitamins">
-                <span class="form__checkbox-custom"></span>
+                <input class="visually-hidden form__checkbox" id="vitamins" type="checkbox" name="vitamins">
                 <span class="label">Витамины</span>
               </label>
 
@@ -176,10 +167,19 @@
       </div>
       <section class="contacts__map-wrapper">
         <div id="map" class="contacts__map"></div>
+        <picture>
+          <source type="image/webp" media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+          <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+
+          <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+          <img class="contacts__map-img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="Банка корма Cat Energy">
+        </picture>
       </section>
     </section>
   </main>
-</div>
 
 <footer class="page-footer">
   <div class="page-footer__wrapper">
@@ -213,7 +213,10 @@
   </div>
 </footer>
 
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/script.js"></script>
+
+</body>
 
 </html>

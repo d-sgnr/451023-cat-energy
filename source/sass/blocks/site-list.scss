@@ -15,7 +15,7 @@
   line-height: 1;
 }
 
-.site-list__item a {
+.site-list__item:not(.site-list__item--active) a {
   transition: 0.3s;
 
   &:hover {
@@ -60,12 +60,6 @@
 
   .site-list__item--active--index a {
     border-bottom: 2px solid white;
-  }
-
-  .page-header--index .site-list a {
-    @include o-regular;
-    font-size: 20px;
-    color: white;
   }
 
   .site-list a {

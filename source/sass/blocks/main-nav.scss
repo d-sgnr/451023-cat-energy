@@ -1,15 +1,13 @@
 .main-nav__toggle {
   width: 25px;
   height: 19px;
-  background-color: inherit;
   border: none;
   position: absolute;
   right: 20px;
   top: 23px;
-  display: flex;
   padding: 0;
-  flex-direction: column;
-  justify-content: space-between;
+  background: linear-gradient(to top, white 8px, $black 8px, $black 10px, white 10px, white 100%);
+  transition: 0.3s;
 
   &::before {
     content: "";
@@ -18,6 +16,8 @@
     display: block;
     width: 25px;
     transition: 0.3s;
+    position: absolute;
+    top: 0;
   }
 
   &::after {
@@ -27,15 +27,9 @@
     display: block;
     width: 25px;
     transition: 0.3s;
+    position: absolute;
+    bottom: 0;
   }
-}
-
-.main-nav__toggle span {
-  background-color: $black;
-  height: 2px;
-  display: block;
-  width: 25px;
-  transition: 0.3s;
 }
 
 @media (max-width: $mobile-width-only) {
@@ -60,6 +54,8 @@
   }
 
   .main-nav__toggle--active {
+    background: none;
+
     &::before {
       transition: 0.3s;
       transform: translateY(8px) rotate(45deg);

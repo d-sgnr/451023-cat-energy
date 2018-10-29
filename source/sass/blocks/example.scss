@@ -94,6 +94,12 @@
     padding: 0;
   }
 
+  .example__bg-inner {
+    display: flex;
+    width: 1220px;
+    margin: auto;
+  }
+
   .example__header {
     margin-bottom: 65px;
     line-height: 1;
@@ -121,13 +127,6 @@
     margin-top: 0;
   }
 
-  .example__before-after {
-    position: absolute;
-    top: -174px;
-    left: 50%;
-    margin-left: -37px;
-  }
-
   .example__overall {
     display: inline;
   }
@@ -135,6 +134,11 @@
   .example__overall span {
     display: inline;
     margin-left: 64px;
+  }
+
+  .example__before-after {
+    position: relative;
+    left: 73px;
   }
 
   .example__wrapper--top {

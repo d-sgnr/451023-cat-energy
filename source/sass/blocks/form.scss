@@ -97,8 +97,13 @@
 
 .form__choose-item {
   transition: 0.3s;
+  position: relative;
+  padding-left: 46px;
+  margin-bottom: 12px;
+  min-height: 30px;
+  max-width: fit-content;
 
-  &:hover .form__radio-custom {
+  &:hover .label::before {
     border-color: #bababa;
     transition: 0.3s;
   }
@@ -114,12 +119,17 @@
 }
 
 .form__add-item {
-  display: flex;
-  align-items: center;
+  position: relative;
   margin-right: 0;
   transition: 0.3s;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  margin-bottom: 11px;
+  padding-left: 46px;
+  min-height: 30px;
 
-  &:hover .form__checkbox-custom {
+  &:hover .label::before {
     border-color: #bababa;
     transition: 0.3s;
   }
@@ -147,7 +157,7 @@
 
 .form__choose {
   margin-bottom: 31px;
-  padding: 21px 0;
+  padding: 23px 0;
   position: relative;
 }
 
@@ -171,6 +181,7 @@
   width: 100%;
   max-width: 280px;
   margin-bottom: 20px;
+  padding: 12px 8px;
 }
 
 .form__item-icon {
@@ -191,14 +202,16 @@
   width: 21px;
   height: 21px;
 }
-// Кастомные чекбоксы
 
-.form__add-item .form__checkbox {
-  display: none;
+//Кастомный чекбокс
+
+.form__choose-item .label {
+  display: inline-block;
 }
 
-.form__checkbox-custom {
-  position: relative;
+.form__add-item .label::before {
+  position: absolute;
+  content: "";
   width: 30px;
   height: 30px;
   border: 1px solid $light-grey;
@@ -209,9 +222,23 @@
   align-items: center;
   transition: 0.3s;
   flex-shrink: 0;
+  left: 0;
+  top: 0;
 }
 
-.form__checkbox:checked + .form__checkbox-custom::before {
+.form__add-item .label::after {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  left: 4px;
+  top: 5px;
+}
+
+.form__checkbox + .label::after {
+  content: none;
+}
+
+.form__checkbox:checked + .label::after {
   content: "";
   background-image: url("../img/icon-tick.svg");
   background-size: cover;
@@ -220,14 +247,20 @@
   width: 22px;
   height: 17px;
 }
-// Кастомные радио
 
-.form__item-wrapper .form__radio {
-  display: none;
+.form__checkbox:focus + .label::before {
+  outline: #3b99fc auto 5px;
 }
 
-.form__radio-custom {
-  position: relative;
+// Кастомные радио
+
+.form__radio:focus + .label::before {
+  outline: #3b99fc auto 5px;
+}
+
+.form__choose-item .label::before {
+  content: "";
+  position: absolute;
   width: 30px;
   height: 30px;
   border: 1px solid $light-grey;
@@ -239,13 +272,23 @@
   align-items: center;
   transition: 0.3s;
   flex-shrink: 0;
+  left: 0;
+  top: 0;
 }
 
-.form__radio:checked + .form__radio-custom::before {
+.form__choose-item .label::after {
+  display: inline-block;
+  position: absolute;
   content: "";
-  display: block;
+  left: 9px;
+  top: 9px;
   width: 12px;
   height: 12px;
+}
+
+.form__radio:checked + .label::after {
+  content: "";
+  display: block;
   background: $green;
   border-radius: 100%;
 }
@@ -284,8 +327,6 @@
   }
 
   .form__add-item {
-    margin-bottom: 13px;
-
     &:last-child {
       margin-bottom: 0;
     }
@@ -300,9 +341,10 @@
     height: 57px;
   }
 
-  .form__checkbox-custom {
-    width: 40px;
-    height: 40px;
+  .form__choose-item {
+    padding-left: 61px;
+    margin-bottom: 12px;
+    min-height: 40px;
   }
 
   .form__choose-item:last-child {
@@ -316,24 +358,14 @@
 
   .form__button {
     margin: 0 61px 0 0;
-  }
-
-  .form__radio-custom {
-    width: 40px;
-    height: 40px;
-    margin-right: 21px;
-  }
-
-  .form__radio:checked + .form__radio-custom::before {
-    width: 18px;
-    height: 18px;
+    padding: 16px 8px;
   }
 
   .form__text {
     font-size: 20px;
     line-height: 1.5;
     margin-bottom: 64px;
-    max-width: 323px;
+    max-width: 360px;
   }
 
   .form__label {
@@ -351,8 +383,33 @@
   }
 
   .form__add-item {
-    width: 50%;
-    margin-bottom: 32px;
+    width: 40%;
+    margin-bottom: 31px;
+    padding-left: 57px;
+    min-height: 40px;
+    height: 100%;
+  }
+
+  .form__add-item .label::after {
+    left: 9px;
+    top: 11px;
+  }
+
+  .form__add-item .label::before {
+    width: 40px;
+    height: 40px;
+  }
+
+  .form__choose-item .label::before {
+    width: 40px;
+    height: 40px;
+  }
+
+  .form__choose-item .label::after {
+    width: 18px;
+    height: 18px;
+    left: 11px;
+    top: 11px;
   }
 
   .form {
@@ -361,7 +418,9 @@
   }
 
   .form__choose {
-    padding: 23px 26px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 26px;
     box-sizing: border-box;
     border: 1px solid $light-grey;
     margin-bottom: 72px;
@@ -379,10 +438,6 @@
 
   .form__comment {
     margin-bottom: 60px;
-  }
-
-  .form__item-long {
-    flex-grow: 1;
   }
 
   .form__input--textarea {
@@ -426,12 +481,17 @@
   .form__choose {
     width: 570px;
     margin-bottom: 0;
-    padding: 26px;
+    padding: 27px;
     height: 100%;
   }
 
   .form__add-item {
-    width: 20%;
+    box-sizing: border-box;
+    width: 25%;
+  }
+
+  .form__item-long {
+    width: 47%;
   }
 
   .form__wrapper {
@@ -441,10 +501,13 @@
 
   .form__wrapper--add {
     margin-bottom: 30px;
-    justify-content: space-between;
   }
 
   .form__wrapper--basic {
     margin-bottom: 52px;
+  }
+
+  .form__contacts .form__wrapper {
+    justify-content: space-between;
   }
 }

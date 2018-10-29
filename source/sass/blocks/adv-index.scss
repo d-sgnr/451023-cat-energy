@@ -128,11 +128,11 @@
 
 @media (min-width: $desktop-width) {
   .adv-index {
-    height: 696px;
-    margin-bottom: 80px;
-    padding-top: 226px;
-    min-height: auto;
+    min-height: 661px;
+    padding: 108px 0 0 83px;
+    max-width: 1220px;
     box-sizing: border-box;
+    position: static;
 
     &::before {
       content: "";
@@ -145,6 +145,7 @@
       background-size: cover;
       background-image: url("../img/index-background-desktop@2x.jpg");
       background-color: $green;
+      background-position: center;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/index-background-desktop@2x.jpg");
@@ -153,7 +154,7 @@
   }
 
   .adv-index__call {
-    margin-bottom: 61px;
+    margin-bottom: 55px;
   }
 
   .adv-index__image {
@@ -167,7 +168,7 @@
   }
 
   .adv-index__heading {
-    margin-bottom: 33px;
+    margin-bottom: 41px;
     padding: 0;
     line-height: 1;
   }

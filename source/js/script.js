@@ -67,6 +67,7 @@ navToggle.addEventListener("click", function() {
   }
 });
 
+
 //Input-Error
 
 $(".form__button").click(function() {
@@ -82,3 +83,9 @@ $(".form__button").click(function() {
 $(document).on("input change", ".form__input", function() {
   $(this).removeClass("form__input--error");
 });
+
+$(".goods__button").attr("href", "#modal");
+
+$(".goods-add__button").attr("href", "#modal");
+
+$(".more__button").attr("href", "");
