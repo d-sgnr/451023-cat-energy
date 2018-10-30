@@ -169,18 +169,10 @@
   .before-after__wrapper {
     margin-top: -174px;
     position: relative;
+  }
 
-    &::after {
-      position: absolute;
-      content: "";
-      background: $bg-darker-grey;
-      height: 462px;
-      width: 9999px;
-      top: 174px;
-      margin: 0;
-      z-index: 0;
-      left: 360px;
-    }
+  .before-after__img--after img {
+    left: -124%;
   }
 
   .before-after__img--before {
@@ -189,10 +181,14 @@
   }
 
   .before-after__img--after {
-    width: 360px;
+    width: 283px;
     z-index: 50;
     margin-bottom: 35px;
     height: 517px;
     top: -21px;
+  }
+
+  .before-after__slider {
+    left: 36px;
   }
 }

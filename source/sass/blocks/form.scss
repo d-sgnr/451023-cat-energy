@@ -468,10 +468,6 @@
     max-width: none;
   }
 
-  .form__contacts .form__item-wrapper:nth-child(odd) {
-    margin-right: 78px;
-  }
-
   .form__basic {
     margin-right: 80px;
     flex-grow: 1;
@@ -509,5 +505,6 @@
 
   .form__contacts .form__wrapper {
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }

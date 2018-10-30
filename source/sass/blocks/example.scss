@@ -98,6 +98,7 @@
     display: flex;
     width: 1220px;
     margin: auto;
+    background: linear-gradient(to right, $bg-grey 935px, $bg-darker-grey 935px, $bg-darker-grey 100%);
   }
 
   .example__header {
@@ -106,7 +107,7 @@
   }
 
   .example__bg {
-    background: $bg-grey;
+    background: linear-gradient(to right, $bg-grey 1045px, $bg-darker-grey 1045px, $bg-darker-grey 100%);
     min-height: 462px;
   }
 
@@ -134,11 +135,6 @@
   .example__overall span {
     display: inline;
     margin-left: 64px;
-  }
-
-  .example__before-after {
-    position: relative;
-    left: 73px;
   }
 
   .example__wrapper--top {
