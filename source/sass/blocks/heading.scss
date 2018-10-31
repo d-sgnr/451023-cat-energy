@@ -27,10 +27,6 @@
 @media (max-width: $mobile-width-only) {
   .heading--line--big {
     line-height: 1;
-
-    &::after {
-      top: 30%;
-    }
   }
 
   .heading--line--big span {
