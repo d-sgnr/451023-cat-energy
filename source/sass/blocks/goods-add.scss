@@ -2,6 +2,11 @@
   @include list-reset;
 }
 
+.goods-add__wrap {
+  width: 280px;
+  margin: auto;
+}
+
 .goods-add__item {
   width: 100%;
   border-bottom: 1px solid $light-grey;
@@ -50,6 +55,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  .goods-add__wrap {
+    width: 708px;
+    margin: auto;
   }
 
   .goods-add {
@@ -105,6 +115,11 @@
     flex-wrap: nowrap;
     padding: 16px 0;
     margin: 0;
+  }
+
+  .goods-add__wrap {
+    width: 1220px;
+    margin: auto;
   }
 
   .goods-add {

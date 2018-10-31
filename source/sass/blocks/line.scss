@@ -1,0 +1,37 @@
+.line {
+  position: relative;
+  min-height: 4px;
+  margin-bottom: 27px;
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: 60%;
+    height: 4px;
+    margin-top: -2px;
+    background-color: $green;
+    content: "";
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .line {
+    margin-bottom: 72px;
+  }
+
+  .form__line--add {
+    margin-bottom: 54px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .line {
+    margin-bottom: 72px;
+  }
+
+  .form__line--add {
+    margin-bottom: 54px;
+  }
+}

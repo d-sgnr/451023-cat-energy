@@ -4,6 +4,11 @@
   margin-bottom: 12px;
 }
 
+.form__wrap {
+  width: 280px;
+  margin: auto;
+}
+
 .form__wrapper {
   display: flex;
   flex-direction: column;
@@ -341,6 +346,12 @@
     height: 57px;
   }
 
+  .form__wrap {
+    width: 708px;
+    margin: auto;
+    padding-left: 69px;
+  }
+
   .form__choose-item {
     padding-left: 61px;
     margin-bottom: 12px;
@@ -414,7 +425,6 @@
 
   .form {
     margin-bottom: 71px;
-    padding: 0 40px;
   }
 
   .form__choose {
@@ -466,6 +476,12 @@
   .form__button {
     width: 568px;
     max-width: none;
+  }
+
+  .form__wrap {
+    width: 1220px;
+    margin: auto;
+    padding: 0;
   }
 
   .form__basic {
